@@ -1,0 +1,171 @@
+#----------------------------------------------------------------------
+#  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+#----------------------------------------------------------------------
+#
+#    File: MrImaging\seq\FLASH\empty.tok@@\main\1
+# Version:
+#  Author: KOELLNER
+#    Date: Mi 05.06.2002 17:00 
+#
+#    Lang: Mephisto input file
+# Project: NUMARIS/4
+#
+# Descrip: Protocol parameters for SeqUT
+#
+#----------------------------------------------------------------------
+
+
+#include   = q:\n4\comp\Application\Mephisto\input2.pro
+
+
+#TR [All] = Max
+#TE [All] = Max
+#TD [All] = Max
+#TI [All] = 200
+
+#FOVRead  = 300
+#FOVPhase = 40
+
+
+## General Properties
+## ------------------
+#Dim = 2d
+# 2d / 3d
+
+#GradientSystem = normal
+
+
+## RF Properties
+## -------------
+#RFPulseType = normal
+# fast / normal / low
+
+#RFSpoiling = on
+
+#FlipAngle = 80
+
+
+
+## Loop control
+## ------------
+#Averaging = short
+# short term / long term
+
+#SliceSeriesmode = interleaved
+# ascending / descending / interleaved
+
+#MultiSlice = interleaved
+# interleaved / sequential
+
+#AsymmetricEcho =              off
+
+#Interpolation =               off
+
+#EPIFactor =                   64
+
+#TurboFactor =                 7
+
+#Contrasts =                   2
+
+#Segments =                    3
+
+#Averages = 2
+#Measurement = 3
+
+
+#BaseMatrix =                  256
+
+#Bandwidth =		      130
+
+
+## 2D Stuff
+## --------
+#PhaseResolution =             75
+
+#PhaseOversampling =           5
+
+#PhasePartialFourier =         off
+#   4/8  /  5/8  /  6/8  / 7/8  / off
+
+
+## Slices
+## ------
+#lSlices  = 6
+
+#lConcatenations = 2
+
+#SliceThickness =              3
+
+#SliceOrientation [0] =        1 / 6 / -1
+#SliceOrientation [1] =        cor
+#SliceOrientation [2] =        tra
+#SliceOrientation [3] =        tra
+#SliceOrientation [4] =        tra
+#SliceOrientation [5] =        sag
+
+#SlicePosition [0] =           10 / 23.4 / -43.4
+#SlicePosition [1] =           69 / -4.5 / 17
+#SlicePosition [2] =           20 / 0    / 0
+#SlicePosition [3] =           0  / 20   / 0
+#SlicePosition [4] =           0  / 0    / 20
+#SlicePosition [5] =           0  / 0    / 0
+
+
+## Regular Sats
+## ------------
+#lRSats               = 6
+#lRSatOrientation [0] = Tra
+#lRSatOrientation [1] = Tra
+#lRSatOrientation [2] = Sag
+#lRSatOrientation [3] = Cor
+#lRSatOrientation [4] = Tra
+#lRSatOrientation [5] = Sag
+#lRSatOrientation [6] = Cor
+#lRSatPos [0] = -150
+#lRSatPos [1] = -100
+#lRSatPos [2] =  -50
+#lRSatPos [3] =   50
+#lRSatPos [4] =  100
+#lRSatPos [5] =  150
+#lRSatThick [0] = Min
+#lRSatThick [1] = Min
+#lRSatThick [2] = Max
+#lRSatThick [3] = Max
+#lRSatThick [4] = 50
+#lRSatThick [5] = 25
+
+
+## Preparation Pulses
+## ------------------
+#Introduction = on
+
+#MTC = off
+
+#FatSat = fat 
+#   fat saturation  /  none
+
+#WaterSat = none
+
+#inversion = slice
+#   slice selective / volume selective / none
+
+#DarkBloodPulse = off
+
+
+## Physiologic Stuff
+## -----------------
+#PhysioMode      = Pulse/Trigger
+#TR [All]        = Min ?
+#Phases          = 2
+#TR [All]        = Max
+
+
+
+
+#FOVRead  = min
+#FOVPhase = 100
+
+#TD [All] = 2
+#TI [All] = Min
+#TE [All] = 20
+#TR [All] = Min ?

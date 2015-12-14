@@ -1,0 +1,34 @@
+   
+   Z:\n4\pkg\MrServers\MrImaging\seq\capsuleCL\pt1_ERR.dsv
+   
+   Created by DSP-Simulator / V4.0 - debug version (Build: Jun 17 2012)
+   16:46:10 on Tuesday, November 04, 2014
+   
+
+= Starting protocol simulation.
+  - The protocol contains 1 event blocks.
+  - These event blocks do supply DSP instructions for approximately 0.000000.
+
+= Gradient amplitude check is active:
+  - Maximum allowed gradient strength in X orientation: 43.000000 mT/m
+  - Maximum allowed gradient strength in Y orientation: 43.000000 mT/m
+  - Maximum allowed gradient strength in Z orientation: 43.000000 mT/m
+
+= Gradient slew rate check is active:
+  - Maximum allowed slew rate in X orientation: 180.180176 mT/m/ms
+  - Maximum allowed slew rate in Y orientation: 180.180176 mT/m/ms
+  - Maximum allowed slew rate in Z orientation: 180.180176 mT/m/ms
+
+= Sequence passed the gradient amplitude check successfully.
+  - The maximum allowed gradient strength has not been exceeded.
+  - The peak gradient strength in X orientation was: 23.979834 mT/m.
+  - The peak gradient strength in Y orientation was: 0.000000 mT/m.
+  - The peak gradient strength in Z orientation was: 23.979834 mT/m.
+
+= Sequence passed the gradient slew rate check successfully.
+  - The maximum allowed gradient slew rate has not been exceeded.
+  - The peak slew rate in X orientation was: 171.284521 mT/m/ms.
+  - The peak slew rate in Y orientation was: 0.000000 mT/m/ms.
+  - The peak slew rate in Z orientation was: 171.284521 mT/m/ms.
+
+= Simulation successfully complete

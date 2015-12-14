@@ -1,0 +1,33 @@
+; 
+; Z:\n4\pkg\MrServers\MrImaging\seq\capsuleCL\pt1_GRY.dsv
+; 
+; Created by DSP-Simulator / V4.0 - debug version (Build: Jun 17 2012)
+; 16:46:12 on Tuesday, November 04, 2014
+; 
+
+
+; This file includes the data for: Y Gradient
+
+
+[FILETYPE]
+FORMAT=DSV_V0100
+
+[DEFINITIONS]
+TITLE=Y Gradient
+SAMPLES=9206        
+VERTUNITNAME=mT/m
+HORIUNITNAME=µs
+HORIDELTA=10.000000
+VERTFACTOR=1000000.000000
+MAXLIMIT=43.000000
+MINLIMIT=-43.000000
+
+[FRAME]
+
+
+[VALUES]
+0
+0
+9204
+
+;  end of graphic data file

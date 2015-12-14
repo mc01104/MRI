@@ -1,0 +1,2228 @@
+<HTML>
+<HEAD>
+<TITLE> Sequence Unit Test Results of MiniFLASH </TITLE>
+</HEAD>
+<BODY> <FONT  COLOR=#007000>
+<PRE>
+<H2>Unit Test of 'MiniFLASH'</H2>
+
+Sequence DLL:           b:\n4\x86\prod\bin\MiniFLASH
+Unit source code:       
+Status file:            b:\Measdat\Axx60
+Protocol:               minFOV2D_UT.pro (created by mephisto)
+Analyzed event blocks:  47
+
+<FONT COLOR=#149275><b>Unit test of MiniFLASH with protocol 'minFOV2D_UT.pro' on Axx60 passed successfully.</b></FONT>
+
+-------------------
+Summary of EGA keys:
+-------------------
+
+TestResult ErrCount  OKCount Abbrev. EGA Requirement Key                 Description
+---------- --------  ------- ------- -------------------                 -----------
+OK--------        0      476 EGA-07  000_EGA_BildOri_SW_OrientierungTest Image orientation
+OK--------        0       48 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Readout gradient polarity
+OK--------        0       48 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Readout gradient amplitude
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (Ky)
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (KyStep)
+OK--------        0        1 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Phase encode gradient amplitude (Ky)
+OK--------        0       96 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Slice select gradient polarity
+OK--------        0       96 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Slice select gradient amplitude
+OK--------        0       48 EGA-05  000_EGA_BildPos_SW_NCOFrequenzSSel  SRF frequency
+OK--------        0       95 EGA-06  000_EGA_BildPos_SW_NCOFrequenzRO    NCO Offcenter Phases
+--N/A-----        0        0 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (Kz)
+OK--------        0       47 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (KzStep)
+--N/A-----        0        0 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Phase encode gradient amplitude (Kz)
+--N/A-----        0        0 EGA-09  N4_EGA_FlussBild_SW_Sequenz         FlowQuant gradient
+--N/A-----        0        0 EGA-10  N4_EGA_FlussBild_SW_NCOPhase        FlowQuant phase
+--N/A-----        0        0 EGA-11  022_EGA_AbbFehler_SW_SpinEchoSequ.  GS ratio of excitation and refoc puls
+
+------------------------------------
+Summary of non-safety-relevant tests:
+------------------------------------
+
+TestResult ErrCount  OKCount Description
+---------- --------  ------- -----------
+OK--------        0       49 08Ws              SAR calculation (Pulse Energy)
+OK--------        0        1 08Us              SAR calculation (Measurement time)
+OK--------        0        5 relevant ADCs     counter == pSeqExpo->getRelevantReadoutsForMeasTime()
+OK--------        0       47 TRClock           TR == pMrProt->data()->alTR
+--N/A-----        0        0 TIClock           TI == pMrProt->data()->alTI
+--N/A-----        0        0 RSatShift         RSat position
+--N/A-----        0        0 RSatThickness     RSat thickness
+--N/A-----        0        0 CSat              CSat
+--N/A-----        0        0 Optfs             Optfs
+--N/A-----        0        0 OptfsPrep         OptfsPrep
+--N/A-----        0        0 MSat              MSat
+--N/A-----        0        0 TSatShift         TSat position
+--N/A-----        0        0 TSatThickness     TSat thickness
+--N/A-----        0        0 IR                IR or SR pulse
+--N/A-----        0        0 DBThickness       DB thickness
+OK--------        0       47 ADCToRFDelay      Sufficient time from ADC to RF 
+OK--------        0       48 RFToADCDelay      Sufficient time from RF  to ADC
+OK--------        0      156 StoredMoments     2D/3D Moments stored successfully
+OK--------        0        4 ExpMeasRawData    Expected 2D/3D raw data measured
+OK--------        0      336 GradDefinition    Gradient definition (ramp times)
+OK--------        0      237 MdhEntries        Correct Mdh entries
+OK--------        0       97 GradMoment        0. gradient moments rephased
+OK--------        0        1 FirstGradMoment   1. gradient moments correct
+OK--------        0        1 TE                TE correct for all contrasts
+OK--------        0       48 ADCToADCDelay     Sufficient time from ADC to ADC
+--N/A-----        0        0 EBToRFDelay       Sufficient time from EB start to RF
+OK--------        0       48 UT consistency    unit test self-check
+--N/A-----        0        0 PhysioHalt count  counter == expected physio halt events
+
+------------------------------- 
+Protocol used for the unit test:
+------------------------------- 
+Number of slices/slabs               = 1
+Number of lines measured             = 48
+Number of partitions measured        = 1
+
+Base resolution                      = 64
+Phase resolution                     = 0.75
+Phase-encoding lines                 = 48
+Phase oversampling                   = 0.00
+Phase partial fourier factor         = 1.00
+3D partitions                        = 1
+Slice oversampling                   = 0.00
+Slice partial fourier factor         = 1.00
+PAT                                  = no PAT (AFPE=1 AF3D=1 RefPE=0 Ref3D=0 RefMode=undefined)
+Phase / Read FOV                     = 100.0 mm / 100.0 mm = 100 % aspect ratio
+Slice/slab thickness                 = 2.0 mm
+Offcenter shifts of  slices/slabs:
+   #  0 :   Read  =   38.8 mm,  Phase  =    6.0 mm
+
+TR                                   =   109.7 ms
+TE                                   =   100.0 ms
+TI                                   = (not used)
+TD                                   = (not used)
+
+Bandwidth                            =    80.0 Hz/Pixel
+Effective dwell time                 =   195.4 us
+
+RSats / TSat                         =  0 / OFF
+FatSup / WaterSup                    = OFF / OFF 
+IR / SR / MTC / DB                   = OFF / OFF / OFF / OFF
+
+Physiologic mode #1                  = NONE
+Physiologic mode #2                  = NONE
+Number of phases                     = 1
+
+
+---------------------
+Image header entries:
+---------------------
+Measurement Time    : 5.27 sec
+Sequence String     : "fl2d1"     (short: "fl")
+
+
+-------------------------------------------------------
+Link to graphic files (Measured lines and partitions)  :
+-------------------------------------------------------
+Graphic : <A HREF = file://b:\n4\x86\prod\bin\MiniFLASH_s00.bmp > b:\n4\x86\prod\bin\MiniFLASH_s00.bmp </a>
+
+
+------------------------------------------------------------------ 
+Description of the exceptions specified by the sequence programmer:
+------------------------------------------------------------------ 
+
+
+
+----------------------------------------------------- 
+Dump of complete protocol...
+----------------------------------------------------- 
+
+<FONT SIZE=-4> 
+
+### ASCCONV BEGIN ###
+ulVersion                                = 0x1dab37c
+tSequenceFileName                        = "b:\n4\x86\prod\bin\MiniFLASH"
+tProtocolName                            = "minFOV2D_UT.pro (created by mephisto)"
+ucTablePositioningMode                   = 0x2
+sProtConsistencyInfo.tMeasuredBaselineString = "000"
+sProtConsistencyInfo.tBaselineString     = "000"
+sProtConsistencyInfo.tSystemType         = "011"
+sProtConsistencyInfo.flNominalB0         = 1.494
+sProtConsistencyInfo.flGMax              = 16
+sProtConsistencyInfo.flRiseTime          = 11.8
+sProtConsistencyInfo.lMaximumNofRxReceiverChannels = 8
+sGRADSPEC.bEddyCompensationValid         = 1
+sGRADSPEC.bB0CompensationValid           = 1
+sGRADSPEC.bCrossTermCompensationValid    = 1
+sGRADSPEC.bOffsetValid                   = 1
+sGRADSPEC.lDelayX                        = 20
+sGRADSPEC.lDelayY                        = 20
+sGRADSPEC.lDelayZ                        = 20
+sGRADSPEC.bDelayValid                    = 1
+sGRADSPEC.flSensitivityX                 = 6.531e-005
+sGRADSPEC.flSensitivityY                 = 6.151e-005
+sGRADSPEC.flSensitivityZ                 = 5.943e-005
+sGRADSPEC.bSensitivityValid              = 1
+sGRADSPEC.bShimCurrentValid              = 1
+sGRADSPEC.ucMode                         = 0x2
+sTXSPEC.asNucleusInfo[0].tNucleus        = "1H"
+sTXSPEC.asNucleusInfo[0].lFrequency      = 63600000
+sTXSPEC.asNucleusInfo[0].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[0].flReferenceAmplitude = 300
+sTXSPEC.asNucleusInfo[0].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[0].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[0].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[0].bRFPAIndexValid = 1
+sTXSPEC.asNucleusInfo[1].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[1].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[1].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[1].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[1].lRFPAIndex      = -1
+sTXSPEC.asNucleusInfo[1].bRFPAIndexValid = 1
+sTXSPEC.aRFPULSE[0].tName                = "fl_templ_ex"
+sTXSPEC.aRFPULSE[0].bAmplitudeValid      = 0x1
+sTXSPEC.aRFPULSE[0].flAmplitude          = 18.5808
+sTXSPEC.lNoOfTraPulses                   = 1
+sTXSPEC.lBCExcitationMode                = 1
+sTXSPEC.flKDynMagnitudeMin               = 0.5
+sTXSPEC.flKDynMagnitudeMax               = 1.5
+sTXSPEC.flKDynMagnitudeClipLow           = 1
+sTXSPEC.flKDynMagnitudeClipHigh          = 1
+sTXSPEC.flKDynPhaseMax                   = 0.698132
+sTXSPEC.flKDynPhaseClip                  = 0.174533
+sTXSPEC.bKDynValid                       = 1
+sTXSPEC.ucRFPulseType                    = 0x2
+sTXSPEC.ucExcitMode                      = 0x1
+sTXSPEC.ucSimultaneousExcitation         = 0x1
+sRXSPEC.lGain                            = 1
+sRXSPEC.bGainValid                       = 1
+sRXSPEC.alDwellTime[0]                   = 97700
+sAdjData.uiAdjFreMode                    = 0x1
+sAdjData.uiAdjShimMode                   = 0x1
+sAdjData.uiAdjWatSupMode                 = 0x1
+sAdjData.uiAdjMDSMode                    = 0x1
+sAdjData.uiAdjTableTolerance             = 0x1
+alTR[0]                                  = 109740
+lContrasts                               = 1
+alTE[0]                                  = 100000
+acFlowComp[0]                            = 1
+lCombinedEchoes                          = 1
+sSliceArray.asSlice[0].sPosition.dSag    = 10
+sSliceArray.asSlice[0].sPosition.dCor    = 23.4
+sSliceArray.asSlice[0].sPosition.dTra    = -43.4
+sSliceArray.asSlice[0].sNormal.dSag      = 0.1622214211
+sSliceArray.asSlice[0].sNormal.dCor      = 0.9733285268
+sSliceArray.asSlice[0].sNormal.dTra      = -0.1622214211
+sSliceArray.asSlice[0].dThickness        = 2
+sSliceArray.asSlice[0].dPhaseFOV         = 100
+sSliceArray.asSlice[0].dReadoutFOV       = 100
+sSliceArray.lSize                        = 1
+sSliceArray.lCor                         = 1
+sSliceArray.lConc                        = 1
+sSliceArray.ucMode                       = 0x4
+sSliceArray.sTSat.dThickness             = 50
+sGroupArray.asGroup[0].nSize             = 1
+sGroupArray.asGroup[0].dDistFact         = 0.2
+sGroupArray.anMember[1]                  = -1
+sGroupArray.lSize                        = 1
+sGroupArray.sPSat.dThickness             = 50
+sAutoAlign.dAAMatrix[0]                  = 1
+sAutoAlign.dAAMatrix[5]                  = 1
+sAutoAlign.dAAMatrix[10]                 = 1
+sAutoAlign.dAAMatrix[15]                 = 1
+sNavigatorPara.lBreathHoldMeas           = 1
+sNavigatorPara.lRespComp                 = 4
+sBladePara.dBladeCoverage                = 100
+sBladePara.ucMotionCorr                  = 0x2
+sPrepPulses.ucFatSat                     = 0x4
+sPrepPulses.ucWaterSat                   = 0x4
+sPrepPulses.ucInversion                  = 0x4
+sPrepPulses.ucSatRecovery                = 0x1
+sPrepPulses.ucT2Prep                     = 0x1
+sPrepPulses.ucTIScout                    = 0x1
+sPrepPulses.ucFatSatMode                 = 0x2
+sPrepPulses.dDarkBloodThickness          = 200
+sPrepPulses.dDarkBloodFlipAngle          = 200
+sPrepPulses.dT2PrepDuration              = 40
+sPrepPulses.dIRPulseThicknessFactor      = 0.77
+sKSpace.dPhaseResolution                 = 0.75
+sKSpace.dSliceResolution                 = 1
+sKSpace.dAngioDynCentralRegionA          = 20
+sKSpace.dAngioDynSamplingDensityB        = 25
+sKSpace.lBaseResolution                  = 64
+sKSpace.lPhaseEncodingLines              = 48
+sKSpace.lPartitions                      = 64
+sKSpace.lImagesPerSlab                   = 64
+sKSpace.lRadialViews                     = 64
+sKSpace.lRadialInterleavesPerImage       = 2
+sKSpace.lLinesPerShot                    = 1
+sKSpace.unReordering                     = 0x1
+sKSpace.dSeqPhasePartialFourierForSNR    = 1
+sKSpace.ucPhasePartialFourier            = 0x10
+sKSpace.ucSlicePartialFourier            = 0x10
+sKSpace.ucAveragingMode                  = 0x1
+sKSpace.ucMultiSliceMode                 = 0x2
+sKSpace.ucDimension                      = 0x2
+sKSpace.ucTrajectory                     = 0x1
+sKSpace.ucViewSharing                    = 0x1
+sKSpace.ucAsymmetricEchoMode             = 0x1
+sFastImaging.lEPIFactor                  = 1
+sFastImaging.lTurboFactor                = 1
+sFastImaging.lSliceTurboFactor           = 1
+sFastImaging.lSegments                   = 1
+sFastImaging.ulEnableRFSpoiling          = 0x1
+sFastImaging.ucSegmentationMode          = 0x1
+sFastImaging.lShots                      = 1
+sFastImaging.lEchoTrainDuration          = 700
+sPhysioImaging.lSignal1                  = 1
+sPhysioImaging.lMethod1                  = 1
+sPhysioImaging.lSignal2                  = 1
+sPhysioImaging.lMethod2                  = 1
+sPhysioImaging.lPhases                   = 1
+sPhysioImaging.lRetroGatedImages         = 16
+sPhysioImaging.sPhysioECG.lTriggerPulses = 1
+sPhysioImaging.sPhysioECG.lTriggerWindow = 5
+sPhysioImaging.sPhysioECG.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioECG.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioECG.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioECG.lTriggerIntervals = 1
+sPhysioImaging.sPhysioPulse.lTriggerPulses = 1
+sPhysioImaging.sPhysioPulse.lTriggerWindow = 5
+sPhysioImaging.sPhysioPulse.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioPulse.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioPulse.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioPulse.lTriggerIntervals = 1
+sPhysioImaging.sPhysioExt.lTriggerPulses = 1
+sPhysioImaging.sPhysioExt.lTriggerWindow = 5
+sPhysioImaging.sPhysioExt.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioExt.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioExt.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioExt.lTriggerIntervals = 1
+sPhysioImaging.sPhysioResp.lRespGateThreshold = 20
+sPhysioImaging.sPhysioResp.lRespGatePhase = 2
+sPhysioImaging.sPhysioResp.dGatingRatio  = 0.3
+sPhysioImaging.sPhysioNative.ucMode      = 0x1
+sSpecPara.lPhaseCyclingType              = 1
+sSpecPara.lPhaseEncodingType             = 1
+sSpecPara.lRFExcitationBandwidth         = 1
+sSpecPara.ucRemoveOversampling           = 0x1
+sSpecPara.lDecouplingType                = 1
+sSpecPara.lNOEType                       = 1
+sSpecPara.lExcitationType                = 1
+sSpecPara.lSpectralSuppression           = 1
+sDiffusion.ulMode                        = 0x1
+sAngio.ucPCFlowMode                      = 0x2
+sAngio.ucTOFInflow                       = 0x4
+sAngio.lDynamicReconMode                 = 1
+sAngio.lTemporalInterpolation            = 1
+sDistortionCorrFilter.ucMode             = 0x1
+sPat.lAccelFactPE                        = 1
+sPat.lAccelFact3D                        = 1
+sPat.ucPATMode                           = 0x1
+sPat.ucRefScanMode                       = 0x1
+sMDS.ulMdsModeMask                       = 0x1
+sMDS.sMdsEndPosSBCS_mm.dTra              = 600
+sMDS.ulMdsReconMode                      = 0x1
+sMDS.dMdsRangeExtension                  = 600
+ucEnableIntro                            = 0x1
+ucDisableChangeStoreImages               = 0x1
+ucReconstructionMode                     = 0x1
+ucOneSeriesForAllMeas                    = 0x1
+ucPHAPSMode                              = 0x1
+ucDixon                                  = 0x1
+ucDixonSaveOriginal                      = 0x1
+lAverages                                = 1
+dAveragesDouble                          = 1
+adFlipAngleDegree[0]                     = 10
+lScanTimeSec                             = 5
+lTotalScanTimeSec                        = 5
+dRefSNR                                  = 430574.3688
+dRefSNR_VOI                              = 430574.3688
+tdefaultEVAProt                          = "%SiemensEvaDefProt%\Inline\Inline.evp"
+asCoilSelectMeas[0].tNucleus             = "1H"
+asCoilSelectMeas[0].iUsedRFactor         = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tCoilID = "Body"
+asCoilSelectMeas[0].asList[0].sCoilElementID.lCoilCopy = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tElement = "BC"
+asCoilSelectMeas[0].asList[0].lElementSelected = 1
+asCoilSelectMeas[0].asList[0].lRxChannelConnected = 1
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[0] = 0xff
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[1] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[2] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[3] = 0xb1
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[0] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[1] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[2] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[3] = 0x2
+asCoilSelectMeas[0].aFFT_SCALE[0].flFactor = 54.0672
+asCoilSelectMeas[0].aFFT_SCALE[0].bValid = 1
+asCoilSelectMeas[0].aFFT_SCALE[0].lRxChannel = 1
+sEFISPEC.bEFIDataValid                   = 1
+ucCineMode                               = 0x1
+ucCoilCombineMode                        = 0x2
+ucFlipAngleMode                          = 0x1
+lTOM                                     = 1
+ucReadOutMode                            = 0x1
+ucBold3dPace                             = 0x1
+ucForcePositioningOnNDIS                 = 0x1
+sParametricMapping.ucParametricMap       = 0x1
+sAsl.ulMode                              = 0x1
+### ASCCONV END ###
+
+</FONT> 
+
+------------------------------
+---End of unit test results---
+------------------------------
+</PRE> </FONT> </BODY> </HTML>
+<HTML>
+<HEAD>
+<TITLE> Sequence Unit Test Results of MiniFLASH </TITLE>
+</HEAD>
+<BODY> <FONT  COLOR=#007000>
+<PRE>
+<H2>Unit Test of 'MiniFLASH'</H2>
+
+Sequence DLL:           b:\n4\x86\prod\bin\MiniFLASH
+Unit source code:       
+Status file:            b:\Measdat\Axx60
+Protocol:               minTE2D_UT.pro (created by mephisto)
+Analyzed event blocks:  47
+
+<FONT COLOR=#149275><b>Unit test of MiniFLASH with protocol 'minTE2D_UT.pro' on Axx60 passed successfully.</b></FONT>
+
+-------------------
+Summary of EGA keys:
+-------------------
+
+TestResult ErrCount  OKCount Abbrev. EGA Requirement Key                 Description
+---------- --------  ------- ------- -------------------                 -----------
+OK--------        0      476 EGA-07  000_EGA_BildOri_SW_OrientierungTest Image orientation
+OK--------        0       48 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Readout gradient polarity
+OK--------        0       48 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Readout gradient amplitude
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (Ky)
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (KyStep)
+OK--------        0        1 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Phase encode gradient amplitude (Ky)
+OK--------        0       96 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Slice select gradient polarity
+OK--------        0       96 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Slice select gradient amplitude
+OK--------        0       48 EGA-05  000_EGA_BildPos_SW_NCOFrequenzSSel  SRF frequency
+OK--------        0       95 EGA-06  000_EGA_BildPos_SW_NCOFrequenzRO    NCO Offcenter Phases
+--N/A-----        0        0 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (Kz)
+OK--------        0       47 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (KzStep)
+--N/A-----        0        0 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Phase encode gradient amplitude (Kz)
+--N/A-----        0        0 EGA-09  N4_EGA_FlussBild_SW_Sequenz         FlowQuant gradient
+--N/A-----        0        0 EGA-10  N4_EGA_FlussBild_SW_NCOPhase        FlowQuant phase
+--N/A-----        0        0 EGA-11  022_EGA_AbbFehler_SW_SpinEchoSequ.  GS ratio of excitation and refoc puls
+
+------------------------------------
+Summary of non-safety-relevant tests:
+------------------------------------
+
+TestResult ErrCount  OKCount Description
+---------- --------  ------- -----------
+OK--------        0       49 08Ws              SAR calculation (Pulse Energy)
+OK--------        0        1 08Us              SAR calculation (Measurement time)
+--N/A-----        0        0 relevant ADCs     counter == pSeqExpo->getRelevantReadoutsForMeasTime()
+OK--------        0       47 TRClock           TR == pMrProt->data()->alTR
+--N/A-----        0        0 TIClock           TI == pMrProt->data()->alTI
+--N/A-----        0        0 RSatShift         RSat position
+--N/A-----        0        0 RSatThickness     RSat thickness
+--N/A-----        0        0 CSat              CSat
+--N/A-----        0        0 Optfs             Optfs
+--N/A-----        0        0 OptfsPrep         OptfsPrep
+--N/A-----        0        0 MSat              MSat
+--N/A-----        0        0 TSatShift         TSat position
+--N/A-----        0        0 TSatThickness     TSat thickness
+--N/A-----        0        0 IR                IR or SR pulse
+--N/A-----        0        0 DBThickness       DB thickness
+OK--------        0       47 ADCToRFDelay      Sufficient time from ADC to RF 
+OK--------        0       48 RFToADCDelay      Sufficient time from RF  to ADC
+OK--------        0      156 StoredMoments     2D/3D Moments stored successfully
+OK--------        0        4 ExpMeasRawData    Expected 2D/3D raw data measured
+OK--------        0      336 GradDefinition    Gradient definition (ramp times)
+OK--------        0      237 MdhEntries        Correct Mdh entries
+OK--------        0       97 GradMoment        0. gradient moments rephased
+OK--------        0        1 FirstGradMoment   1. gradient moments correct
+OK--------        0        1 TE                TE correct for all contrasts
+OK--------        0       48 ADCToADCDelay     Sufficient time from ADC to ADC
+--N/A-----        0        0 EBToRFDelay       Sufficient time from EB start to RF
+OK--------        0       48 UT consistency    unit test self-check
+--N/A-----        0        0 PhysioHalt count  counter == expected physio halt events
+
+------------------------------- 
+Protocol used for the unit test:
+------------------------------- 
+Number of slices/slabs               = 1
+Number of lines measured             = 48
+Number of partitions measured        = 1
+
+Base resolution                      = 64
+Phase resolution                     = 0.75
+Phase-encoding lines                 = 48
+Phase oversampling                   = 0.00
+Phase partial fourier factor         = 1.00
+3D partitions                        = 1
+Slice oversampling                   = 0.00
+Slice partial fourier factor         = 1.00
+PAT                                  = no PAT (AFPE=1 AF3D=1 RefPE=0 Ref3D=0 RefMode=undefined)
+Phase / Read FOV                     = 100.0 mm / 100.0 mm = 100 % aspect ratio
+Slice/slab thickness                 = 10.0 mm
+Offcenter shifts of  slices/slabs:
+   #  0 :   Read  =   38.8 mm,  Phase  =    6.0 mm
+
+TR                                   =     8.1 ms
+TE                                   =     4.0 ms
+TI                                   = (not used)
+TD                                   = (not used)
+
+Bandwidth                            =   898.0 Hz/Pixel
+Effective dwell time                 =    17.4 us
+
+RSats / TSat                         =  0 / OFF
+FatSup / WaterSup                    = OFF / OFF 
+IR / SR / MTC / DB                   = OFF / OFF / OFF / OFF
+
+Physiologic mode #1                  = NONE
+Physiologic mode #2                  = NONE
+Number of phases                     = 1
+
+
+---------------------
+Image header entries:
+---------------------
+Measurement Time    : 0.39 sec
+Sequence String     : "fl2d1"     (short: "fl")
+
+
+-------------------------------------------------------
+Link to graphic files (Measured lines and partitions)  :
+-------------------------------------------------------
+Graphic : <A HREF = file://b:\n4\x86\prod\bin\MiniFLASH_s00.bmp > b:\n4\x86\prod\bin\MiniFLASH_s00.bmp </a>
+
+
+------------------------------------------------------------------ 
+Description of the exceptions specified by the sequence programmer:
+------------------------------------------------------------------ 
+
+
+
+----------------------------------------------------- 
+Dump of complete protocol...
+----------------------------------------------------- 
+
+<FONT SIZE=-4> 
+
+### ASCCONV BEGIN ###
+ulVersion                                = 0x1dab37c
+tSequenceFileName                        = "b:\n4\x86\prod\bin\MiniFLASH"
+tProtocolName                            = "minTE2D_UT.pro (created by mephisto)"
+ucTablePositioningMode                   = 0x2
+sProtConsistencyInfo.tMeasuredBaselineString = "000"
+sProtConsistencyInfo.tBaselineString     = "000"
+sProtConsistencyInfo.tSystemType         = "011"
+sProtConsistencyInfo.flNominalB0         = 1.494
+sProtConsistencyInfo.flGMax              = 16
+sProtConsistencyInfo.flRiseTime          = 11.8
+sProtConsistencyInfo.lMaximumNofRxReceiverChannels = 8
+sGRADSPEC.bEddyCompensationValid         = 1
+sGRADSPEC.bB0CompensationValid           = 1
+sGRADSPEC.bCrossTermCompensationValid    = 1
+sGRADSPEC.bOffsetValid                   = 1
+sGRADSPEC.lDelayX                        = 20
+sGRADSPEC.lDelayY                        = 20
+sGRADSPEC.lDelayZ                        = 20
+sGRADSPEC.bDelayValid                    = 1
+sGRADSPEC.flSensitivityX                 = 6.531e-005
+sGRADSPEC.flSensitivityY                 = 6.151e-005
+sGRADSPEC.flSensitivityZ                 = 5.943e-005
+sGRADSPEC.bSensitivityValid              = 1
+sGRADSPEC.bShimCurrentValid              = 1
+sGRADSPEC.ucMode                         = 0x2
+sTXSPEC.asNucleusInfo[0].tNucleus        = "1H"
+sTXSPEC.asNucleusInfo[0].lFrequency      = 63600000
+sTXSPEC.asNucleusInfo[0].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[0].flReferenceAmplitude = 300
+sTXSPEC.asNucleusInfo[0].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[0].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[0].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[0].bRFPAIndexValid = 1
+sTXSPEC.asNucleusInfo[1].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[1].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[1].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[1].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[1].lRFPAIndex      = -1
+sTXSPEC.asNucleusInfo[1].bRFPAIndexValid = 1
+sTXSPEC.aRFPULSE[0].tName                = "fl_templ_ex"
+sTXSPEC.aRFPULSE[0].bAmplitudeValid      = 0x1
+sTXSPEC.aRFPULSE[0].flAmplitude          = 148.646
+sTXSPEC.lNoOfTraPulses                   = 1
+sTXSPEC.lBCExcitationMode                = 1
+sTXSPEC.flKDynMagnitudeMin               = 0.5
+sTXSPEC.flKDynMagnitudeMax               = 1.5
+sTXSPEC.flKDynMagnitudeClipLow           = 1
+sTXSPEC.flKDynMagnitudeClipHigh          = 1
+sTXSPEC.flKDynPhaseMax                   = 0.698132
+sTXSPEC.flKDynPhaseClip                  = 0.174533
+sTXSPEC.bKDynValid                       = 1
+sTXSPEC.ucRFPulseType                    = 0x2
+sTXSPEC.ucExcitMode                      = 0x1
+sTXSPEC.ucSimultaneousExcitation         = 0x1
+sRXSPEC.lGain                            = 1
+sRXSPEC.bGainValid                       = 1
+sRXSPEC.alDwellTime[0]                   = 8700
+sAdjData.uiAdjFreMode                    = 0x1
+sAdjData.uiAdjShimMode                   = 0x1
+sAdjData.uiAdjWatSupMode                 = 0x1
+sAdjData.uiAdjMDSMode                    = 0x1
+sAdjData.uiAdjTableTolerance             = 0x1
+alTR[0]                                  = 8090
+lContrasts                               = 1
+alTE[0]                                  = 4040
+acFlowComp[0]                            = 1
+lCombinedEchoes                          = 1
+sSliceArray.asSlice[0].sPosition.dSag    = 10
+sSliceArray.asSlice[0].sPosition.dCor    = 23.4
+sSliceArray.asSlice[0].sPosition.dTra    = -43.4
+sSliceArray.asSlice[0].sNormal.dSag      = 0.1622214211
+sSliceArray.asSlice[0].sNormal.dCor      = 0.9733285268
+sSliceArray.asSlice[0].sNormal.dTra      = -0.1622214211
+sSliceArray.asSlice[0].dThickness        = 10
+sSliceArray.asSlice[0].dPhaseFOV         = 100
+sSliceArray.asSlice[0].dReadoutFOV       = 100
+sSliceArray.lSize                        = 1
+sSliceArray.lCor                         = 1
+sSliceArray.lConc                        = 1
+sSliceArray.ucMode                       = 0x4
+sSliceArray.sTSat.dThickness             = 50
+sGroupArray.asGroup[0].nSize             = 1
+sGroupArray.asGroup[0].dDistFact         = 0.2
+sGroupArray.anMember[1]                  = -1
+sGroupArray.lSize                        = 1
+sGroupArray.sPSat.dThickness             = 50
+sAutoAlign.dAAMatrix[0]                  = 1
+sAutoAlign.dAAMatrix[5]                  = 1
+sAutoAlign.dAAMatrix[10]                 = 1
+sAutoAlign.dAAMatrix[15]                 = 1
+sNavigatorPara.lBreathHoldMeas           = 1
+sNavigatorPara.lRespComp                 = 4
+sBladePara.dBladeCoverage                = 100
+sBladePara.ucMotionCorr                  = 0x2
+sPrepPulses.ucFatSat                     = 0x4
+sPrepPulses.ucWaterSat                   = 0x4
+sPrepPulses.ucInversion                  = 0x4
+sPrepPulses.ucSatRecovery                = 0x1
+sPrepPulses.ucT2Prep                     = 0x1
+sPrepPulses.ucTIScout                    = 0x1
+sPrepPulses.ucFatSatMode                 = 0x2
+sPrepPulses.dDarkBloodThickness          = 200
+sPrepPulses.dDarkBloodFlipAngle          = 200
+sPrepPulses.dT2PrepDuration              = 40
+sPrepPulses.dIRPulseThicknessFactor      = 0.77
+sKSpace.dPhaseResolution                 = 0.75
+sKSpace.dSliceResolution                 = 1
+sKSpace.dAngioDynCentralRegionA          = 20
+sKSpace.dAngioDynSamplingDensityB        = 25
+sKSpace.lBaseResolution                  = 64
+sKSpace.lPhaseEncodingLines              = 48
+sKSpace.lPartitions                      = 64
+sKSpace.lImagesPerSlab                   = 64
+sKSpace.lRadialViews                     = 64
+sKSpace.lRadialInterleavesPerImage       = 2
+sKSpace.lLinesPerShot                    = 1
+sKSpace.unReordering                     = 0x1
+sKSpace.dSeqPhasePartialFourierForSNR    = 1
+sKSpace.ucPhasePartialFourier            = 0x10
+sKSpace.ucSlicePartialFourier            = 0x10
+sKSpace.ucAveragingMode                  = 0x1
+sKSpace.ucMultiSliceMode                 = 0x2
+sKSpace.ucDimension                      = 0x2
+sKSpace.ucTrajectory                     = 0x1
+sKSpace.ucViewSharing                    = 0x1
+sKSpace.ucAsymmetricEchoMode             = 0x1
+sFastImaging.lEPIFactor                  = 1
+sFastImaging.lTurboFactor                = 1
+sFastImaging.lSliceTurboFactor           = 1
+sFastImaging.lSegments                   = 1
+sFastImaging.ulEnableRFSpoiling          = 0x1
+sFastImaging.ucSegmentationMode          = 0x1
+sFastImaging.lShots                      = 1
+sFastImaging.lEchoTrainDuration          = 700
+sPhysioImaging.lSignal1                  = 1
+sPhysioImaging.lMethod1                  = 1
+sPhysioImaging.lSignal2                  = 1
+sPhysioImaging.lMethod2                  = 1
+sPhysioImaging.lPhases                   = 1
+sPhysioImaging.lRetroGatedImages         = 16
+sPhysioImaging.sPhysioECG.lTriggerPulses = 1
+sPhysioImaging.sPhysioECG.lTriggerWindow = 5
+sPhysioImaging.sPhysioECG.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioECG.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioECG.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioECG.lTriggerIntervals = 1
+sPhysioImaging.sPhysioPulse.lTriggerPulses = 1
+sPhysioImaging.sPhysioPulse.lTriggerWindow = 5
+sPhysioImaging.sPhysioPulse.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioPulse.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioPulse.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioPulse.lTriggerIntervals = 1
+sPhysioImaging.sPhysioExt.lTriggerPulses = 1
+sPhysioImaging.sPhysioExt.lTriggerWindow = 5
+sPhysioImaging.sPhysioExt.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioExt.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioExt.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioExt.lTriggerIntervals = 1
+sPhysioImaging.sPhysioResp.lRespGateThreshold = 20
+sPhysioImaging.sPhysioResp.lRespGatePhase = 2
+sPhysioImaging.sPhysioResp.dGatingRatio  = 0.3
+sPhysioImaging.sPhysioNative.ucMode      = 0x1
+sSpecPara.lPhaseCyclingType              = 1
+sSpecPara.lPhaseEncodingType             = 1
+sSpecPara.lRFExcitationBandwidth         = 1
+sSpecPara.ucRemoveOversampling           = 0x1
+sSpecPara.lDecouplingType                = 1
+sSpecPara.lNOEType                       = 1
+sSpecPara.lExcitationType                = 1
+sSpecPara.lSpectralSuppression           = 1
+sDiffusion.ulMode                        = 0x1
+sAngio.ucPCFlowMode                      = 0x2
+sAngio.ucTOFInflow                       = 0x4
+sAngio.lDynamicReconMode                 = 1
+sAngio.lTemporalInterpolation            = 1
+sDistortionCorrFilter.ucMode             = 0x1
+sPat.lAccelFactPE                        = 1
+sPat.lAccelFact3D                        = 1
+sPat.ucPATMode                           = 0x1
+sPat.ucRefScanMode                       = 0x1
+sMDS.ulMdsModeMask                       = 0x1
+sMDS.sMdsEndPosSBCS_mm.dTra              = 600
+sMDS.ulMdsReconMode                      = 0x1
+sMDS.dMdsRangeExtension                  = 600
+ucEnableIntro                            = 0x1
+ucDisableChangeStoreImages               = 0x1
+ucReconstructionMode                     = 0x1
+ucOneSeriesForAllMeas                    = 0x1
+ucPHAPSMode                              = 0x1
+ucDixon                                  = 0x1
+ucDixonSaveOriginal                      = 0x1
+lAverages                                = 1
+dAveragesDouble                          = 1
+adFlipAngleDegree[0]                     = 80
+dRefSNR                                  = 430574.3688
+dRefSNR_VOI                              = 430574.3688
+tdefaultEVAProt                          = "%SiemensEvaDefProt%\Inline\Inline.evp"
+asCoilSelectMeas[0].tNucleus             = "1H"
+asCoilSelectMeas[0].iUsedRFactor         = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tCoilID = "Body"
+asCoilSelectMeas[0].asList[0].sCoilElementID.lCoilCopy = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tElement = "BC"
+asCoilSelectMeas[0].asList[0].lElementSelected = 1
+asCoilSelectMeas[0].asList[0].lRxChannelConnected = 1
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[0] = 0xff
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[1] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[2] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[3] = 0xb1
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[0] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[1] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[2] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[3] = 0x2
+asCoilSelectMeas[0].aFFT_SCALE[0].flFactor = 10.8134
+asCoilSelectMeas[0].aFFT_SCALE[0].bValid = 1
+asCoilSelectMeas[0].aFFT_SCALE[0].lRxChannel = 1
+sEFISPEC.bEFIDataValid                   = 1
+ucCineMode                               = 0x1
+ucCoilCombineMode                        = 0x2
+ucFlipAngleMode                          = 0x1
+lTOM                                     = 1
+ucReadOutMode                            = 0x1
+ucBold3dPace                             = 0x1
+ucForcePositioningOnNDIS                 = 0x1
+sParametricMapping.ucParametricMap       = 0x1
+sAsl.ulMode                              = 0x1
+### ASCCONV END ###
+
+</FONT> 
+
+------------------------------
+---End of unit test results---
+------------------------------
+</PRE> </FONT> </BODY> </HTML>
+<HTML>
+<HEAD>
+<TITLE> Sequence Unit Test Results of MiniFLASH </TITLE>
+</HEAD>
+<BODY> <FONT  COLOR=#007000>
+<PRE>
+<H2>Unit Test of 'MiniFLASH'</H2>
+
+Sequence DLL:           b:\n4\x86\prod\bin\MiniFLASH
+Unit source code:       
+Status file:            b:\Measdat\Axx60
+Protocol:               standard2D_UT.pro (created by mephisto)
+Analyzed event blocks:  191
+
+<FONT COLOR=#149275><b>Unit test of MiniFLASH with protocol 'standard2D_UT.pro' on Axx60 passed successfully.</b></FONT>
+
+-------------------
+Summary of EGA keys:
+-------------------
+
+TestResult ErrCount  OKCount Abbrev. EGA Requirement Key                 Description
+---------- --------  ------- ------- -------------------                 -----------
+OK--------        0     1916 EGA-07  000_EGA_BildOri_SW_OrientierungTest Image orientation
+OK--------        0      192 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Readout gradient polarity
+OK--------        0      192 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Readout gradient amplitude
+OK--------        0      190 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (Ky)
+OK--------        0      190 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (KyStep)
+OK--------        0        1 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Phase encode gradient amplitude (Ky)
+OK--------        0      384 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Slice select gradient polarity
+OK--------        0      384 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Slice select gradient amplitude
+OK--------        0      192 EGA-05  000_EGA_BildPos_SW_NCOFrequenzSSel  SRF frequency
+OK--------        0      383 EGA-06  000_EGA_BildPos_SW_NCOFrequenzRO    NCO Offcenter Phases
+--N/A-----        0        0 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (Kz)
+OK--------        0      191 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (KzStep)
+--N/A-----        0        0 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Phase encode gradient amplitude (Kz)
+--N/A-----        0        0 EGA-09  N4_EGA_FlussBild_SW_Sequenz         FlowQuant gradient
+--N/A-----        0        0 EGA-10  N4_EGA_FlussBild_SW_NCOPhase        FlowQuant phase
+--N/A-----        0        0 EGA-11  022_EGA_AbbFehler_SW_SpinEchoSequ.  GS ratio of excitation and refoc puls
+
+------------------------------------
+Summary of non-safety-relevant tests:
+------------------------------------
+
+TestResult ErrCount  OKCount Description
+---------- --------  ------- -----------
+OK--------        0      193 08Ws              SAR calculation (Pulse Energy)
+OK--------        0        1 08Us              SAR calculation (Measurement time)
+OK--------        0        4 relevant ADCs     counter == pSeqExpo->getRelevantReadoutsForMeasTime()
+OK--------        0      191 TRClock           TR == pMrProt->data()->alTR
+--N/A-----        0        0 TIClock           TI == pMrProt->data()->alTI
+--N/A-----        0        0 RSatShift         RSat position
+--N/A-----        0        0 RSatThickness     RSat thickness
+--N/A-----        0        0 CSat              CSat
+--N/A-----        0        0 Optfs             Optfs
+--N/A-----        0        0 OptfsPrep         OptfsPrep
+--N/A-----        0        0 MSat              MSat
+--N/A-----        0        0 TSatShift         TSat position
+--N/A-----        0        0 TSatThickness     TSat thickness
+--N/A-----        0        0 IR                IR or SR pulse
+--N/A-----        0        0 DBThickness       DB thickness
+OK--------        0      191 ADCToRFDelay      Sufficient time from ADC to RF 
+OK--------        0      192 RFToADCDelay      Sufficient time from RF  to ADC
+OK--------        0      588 StoredMoments     2D/3D Moments stored successfully
+OK--------        0        4 ExpMeasRawData    Expected 2D/3D raw data measured
+OK--------        0     1344 GradDefinition    Gradient definition (ramp times)
+OK--------        0      813 MdhEntries        Correct Mdh entries
+OK--------        0      385 GradMoment        0. gradient moments rephased
+OK--------        0        1 FirstGradMoment   1. gradient moments correct
+OK--------        0        1 TE                TE correct for all contrasts
+OK--------        0      192 ADCToADCDelay     Sufficient time from ADC to ADC
+--N/A-----        0        0 EBToRFDelay       Sufficient time from EB start to RF
+OK--------        0      192 UT consistency    unit test self-check
+--N/A-----        0        0 PhysioHalt count  counter == expected physio halt events
+
+------------------------------- 
+Protocol used for the unit test:
+------------------------------- 
+Number of slices/slabs               = 1
+Number of lines measured             = 192
+Number of partitions measured        = 1
+
+Base resolution                      = 256
+Phase resolution                     = 0.75
+Phase-encoding lines                 = 192
+Phase oversampling                   = 0.00
+Phase partial fourier factor         = 1.00
+3D partitions                        = 1
+Slice oversampling                   = 0.00
+Slice partial fourier factor         = 1.00
+PAT                                  = no PAT (AFPE=1 AF3D=1 RefPE=0 Ref3D=0 RefMode=undefined)
+Phase / Read FOV                     = 247.0 mm / 247.0 mm = 100 % aspect ratio
+Slice/slab thickness                 = 3.0 mm
+Offcenter shifts of  slices/slabs:
+   #  0 :   Read  =  -10.0 mm,  Phase  =   23.4 mm
+
+TR                                   =    25.4 ms
+TE                                   =    20.0 ms
+TI                                   = (not used)
+TD                                   = (not used)
+
+Bandwidth                            =   260.4 Hz/Pixel
+Effective dwell time                 =    15.0 us
+
+RSats / TSat                         =  0 / OFF
+FatSup / WaterSup                    = OFF / OFF 
+IR / SR / MTC / DB                   = OFF / OFF / OFF / OFF
+
+Physiologic mode #1                  = NONE
+Physiologic mode #2                  = NONE
+Number of phases                     = 1
+
+
+---------------------
+Image header entries:
+---------------------
+Measurement Time    : 4.88 sec
+Sequence String     : "fl2d1"     (short: "fl")
+
+
+-------------------------------------------------------
+Link to graphic files (Measured lines and partitions)  :
+-------------------------------------------------------
+Graphic : <A HREF = file://b:\n4\x86\prod\bin\MiniFLASH_s00.bmp > b:\n4\x86\prod\bin\MiniFLASH_s00.bmp </a>
+
+
+------------------------------------------------------------------ 
+Description of the exceptions specified by the sequence programmer:
+------------------------------------------------------------------ 
+
+
+
+----------------------------------------------------- 
+Dump of complete protocol...
+----------------------------------------------------- 
+
+<FONT SIZE=-4> 
+
+### ASCCONV BEGIN ###
+ulVersion                                = 0x1dab37c
+tSequenceFileName                        = "b:\n4\x86\prod\bin\MiniFLASH"
+tProtocolName                            = "standard2D_UT.pro (created by mephisto)"
+ucTablePositioningMode                   = 0x2
+sProtConsistencyInfo.tMeasuredBaselineString = "000"
+sProtConsistencyInfo.tBaselineString     = "000"
+sProtConsistencyInfo.tSystemType         = "011"
+sProtConsistencyInfo.flNominalB0         = 1.494
+sProtConsistencyInfo.flGMax              = 16
+sProtConsistencyInfo.flRiseTime          = 11.8
+sProtConsistencyInfo.lMaximumNofRxReceiverChannels = 8
+sGRADSPEC.bEddyCompensationValid         = 1
+sGRADSPEC.bB0CompensationValid           = 1
+sGRADSPEC.bCrossTermCompensationValid    = 1
+sGRADSPEC.bOffsetValid                   = 1
+sGRADSPEC.lDelayX                        = 20
+sGRADSPEC.lDelayY                        = 20
+sGRADSPEC.lDelayZ                        = 20
+sGRADSPEC.bDelayValid                    = 1
+sGRADSPEC.flSensitivityX                 = 6.531e-005
+sGRADSPEC.flSensitivityY                 = 6.151e-005
+sGRADSPEC.flSensitivityZ                 = 5.943e-005
+sGRADSPEC.bSensitivityValid              = 1
+sGRADSPEC.bShimCurrentValid              = 1
+sGRADSPEC.ucMode                         = 0x2
+sTXSPEC.asNucleusInfo[0].tNucleus        = "1H"
+sTXSPEC.asNucleusInfo[0].lFrequency      = 63600000
+sTXSPEC.asNucleusInfo[0].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[0].flReferenceAmplitude = 300
+sTXSPEC.asNucleusInfo[0].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[0].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[0].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[0].bRFPAIndexValid = 1
+sTXSPEC.asNucleusInfo[1].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[1].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[1].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[1].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[1].lRFPAIndex      = -1
+sTXSPEC.asNucleusInfo[1].bRFPAIndexValid = 1
+sTXSPEC.aRFPULSE[0].tName                = "fl_templ_ex"
+sTXSPEC.aRFPULSE[0].bAmplitudeValid      = 0x1
+sTXSPEC.aRFPULSE[0].flAmplitude          = 148.646
+sTXSPEC.lNoOfTraPulses                   = 1
+sTXSPEC.lBCExcitationMode                = 1
+sTXSPEC.flKDynMagnitudeMin               = 0.5
+sTXSPEC.flKDynMagnitudeMax               = 1.5
+sTXSPEC.flKDynMagnitudeClipLow           = 1
+sTXSPEC.flKDynMagnitudeClipHigh          = 1
+sTXSPEC.flKDynPhaseMax                   = 0.698132
+sTXSPEC.flKDynPhaseClip                  = 0.174533
+sTXSPEC.bKDynValid                       = 1
+sTXSPEC.ucRFPulseType                    = 0x2
+sTXSPEC.ucExcitMode                      = 0x1
+sTXSPEC.ucSimultaneousExcitation         = 0x1
+sRXSPEC.lGain                            = 1
+sRXSPEC.bGainValid                       = 1
+sRXSPEC.alDwellTime[0]                   = 7500
+sAdjData.uiAdjFreMode                    = 0x1
+sAdjData.uiAdjShimMode                   = 0x1
+sAdjData.uiAdjWatSupMode                 = 0x1
+sAdjData.uiAdjMDSMode                    = 0x1
+sAdjData.uiAdjTableTolerance             = 0x1
+alTR[0]                                  = 25400
+lContrasts                               = 1
+alTE[0]                                  = 20000
+acFlowComp[0]                            = 1
+lCombinedEchoes                          = 1
+sSliceArray.asSlice[0].sPosition.dSag    = 10
+sSliceArray.asSlice[0].sPosition.dCor    = 23.4
+sSliceArray.asSlice[0].sPosition.dTra    = -43.4
+sSliceArray.asSlice[0].sNormal.dTra      = 1
+sSliceArray.asSlice[0].dThickness        = 3
+sSliceArray.asSlice[0].dPhaseFOV         = 247
+sSliceArray.asSlice[0].dReadoutFOV       = 247
+sSliceArray.lSize                        = 1
+sSliceArray.lConc                        = 1
+sSliceArray.ucMode                       = 0x4
+sSliceArray.sTSat.dThickness             = 50
+sGroupArray.asGroup[0].nSize             = 1
+sGroupArray.asGroup[0].dDistFact         = 0.2
+sGroupArray.anMember[1]                  = -1
+sGroupArray.lSize                        = 1
+sGroupArray.sPSat.dThickness             = 50
+sAutoAlign.dAAMatrix[0]                  = 1
+sAutoAlign.dAAMatrix[5]                  = 1
+sAutoAlign.dAAMatrix[10]                 = 1
+sAutoAlign.dAAMatrix[15]                 = 1
+sNavigatorPara.lBreathHoldMeas           = 1
+sNavigatorPara.lRespComp                 = 4
+sBladePara.dBladeCoverage                = 100
+sBladePara.ucMotionCorr                  = 0x2
+sPrepPulses.ucFatSat                     = 0x4
+sPrepPulses.ucWaterSat                   = 0x4
+sPrepPulses.ucInversion                  = 0x4
+sPrepPulses.ucSatRecovery                = 0x1
+sPrepPulses.ucT2Prep                     = 0x1
+sPrepPulses.ucTIScout                    = 0x1
+sPrepPulses.ucFatSatMode                 = 0x2
+sPrepPulses.dDarkBloodThickness          = 200
+sPrepPulses.dDarkBloodFlipAngle          = 200
+sPrepPulses.dT2PrepDuration              = 40
+sPrepPulses.dIRPulseThicknessFactor      = 0.77
+sKSpace.dPhaseResolution                 = 0.75
+sKSpace.dSliceResolution                 = 1
+sKSpace.dAngioDynCentralRegionA          = 20
+sKSpace.dAngioDynSamplingDensityB        = 25
+sKSpace.lBaseResolution                  = 256
+sKSpace.lPhaseEncodingLines              = 192
+sKSpace.lPartitions                      = 64
+sKSpace.lImagesPerSlab                   = 64
+sKSpace.lRadialViews                     = 64
+sKSpace.lRadialInterleavesPerImage       = 2
+sKSpace.lLinesPerShot                    = 1
+sKSpace.unReordering                     = 0x1
+sKSpace.dSeqPhasePartialFourierForSNR    = 1
+sKSpace.ucPhasePartialFourier            = 0x10
+sKSpace.ucSlicePartialFourier            = 0x10
+sKSpace.ucAveragingMode                  = 0x1
+sKSpace.ucMultiSliceMode                 = 0x2
+sKSpace.ucDimension                      = 0x2
+sKSpace.ucTrajectory                     = 0x1
+sKSpace.ucViewSharing                    = 0x1
+sKSpace.ucAsymmetricEchoMode             = 0x1
+sFastImaging.lEPIFactor                  = 1
+sFastImaging.lTurboFactor                = 1
+sFastImaging.lSliceTurboFactor           = 1
+sFastImaging.lSegments                   = 1
+sFastImaging.ulEnableRFSpoiling          = 0x1
+sFastImaging.ucSegmentationMode          = 0x1
+sFastImaging.lShots                      = 1
+sFastImaging.lEchoTrainDuration          = 700
+sPhysioImaging.lSignal1                  = 1
+sPhysioImaging.lMethod1                  = 1
+sPhysioImaging.lSignal2                  = 1
+sPhysioImaging.lMethod2                  = 1
+sPhysioImaging.lPhases                   = 1
+sPhysioImaging.lRetroGatedImages         = 16
+sPhysioImaging.sPhysioECG.lTriggerPulses = 1
+sPhysioImaging.sPhysioECG.lTriggerWindow = 5
+sPhysioImaging.sPhysioECG.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioECG.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioECG.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioECG.lTriggerIntervals = 1
+sPhysioImaging.sPhysioPulse.lTriggerPulses = 1
+sPhysioImaging.sPhysioPulse.lTriggerWindow = 5
+sPhysioImaging.sPhysioPulse.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioPulse.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioPulse.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioPulse.lTriggerIntervals = 1
+sPhysioImaging.sPhysioExt.lTriggerPulses = 1
+sPhysioImaging.sPhysioExt.lTriggerWindow = 5
+sPhysioImaging.sPhysioExt.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioExt.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioExt.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioExt.lTriggerIntervals = 1
+sPhysioImaging.sPhysioResp.lRespGateThreshold = 20
+sPhysioImaging.sPhysioResp.lRespGatePhase = 2
+sPhysioImaging.sPhysioResp.dGatingRatio  = 0.3
+sPhysioImaging.sPhysioNative.ucMode      = 0x1
+sSpecPara.lPhaseCyclingType              = 1
+sSpecPara.lPhaseEncodingType             = 1
+sSpecPara.lRFExcitationBandwidth         = 1
+sSpecPara.ucRemoveOversampling           = 0x1
+sSpecPara.lDecouplingType                = 1
+sSpecPara.lNOEType                       = 1
+sSpecPara.lExcitationType                = 1
+sSpecPara.lSpectralSuppression           = 1
+sDiffusion.ulMode                        = 0x1
+sAngio.ucPCFlowMode                      = 0x2
+sAngio.ucTOFInflow                       = 0x4
+sAngio.lDynamicReconMode                 = 1
+sAngio.lTemporalInterpolation            = 1
+sDistortionCorrFilter.ucMode             = 0x1
+sPat.lAccelFactPE                        = 1
+sPat.lAccelFact3D                        = 1
+sPat.ucPATMode                           = 0x1
+sPat.ucRefScanMode                       = 0x1
+sMDS.ulMdsModeMask                       = 0x1
+sMDS.sMdsEndPosSBCS_mm.dTra              = 600
+sMDS.ulMdsReconMode                      = 0x1
+sMDS.dMdsRangeExtension                  = 600
+ucEnableIntro                            = 0x1
+ucDisableChangeStoreImages               = 0x1
+ucReconstructionMode                     = 0x1
+ucOneSeriesForAllMeas                    = 0x1
+ucPHAPSMode                              = 0x1
+ucDixon                                  = 0x1
+ucDixonSaveOriginal                      = 0x1
+lAverages                                = 1
+dAveragesDouble                          = 1
+adFlipAngleDegree[0]                     = 80
+lScanTimeSec                             = 5
+lTotalScanTimeSec                        = 5
+dRefSNR                                  = 430574.3688
+dRefSNR_VOI                              = 430574.3688
+tdefaultEVAProt                          = "%SiemensEvaDefProt%\Inline\Inline.evp"
+asCoilSelectMeas[0].tNucleus             = "1H"
+asCoilSelectMeas[0].iUsedRFactor         = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tCoilID = "Body"
+asCoilSelectMeas[0].asList[0].sCoilElementID.lCoilCopy = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tElement = "BC"
+asCoilSelectMeas[0].asList[0].lElementSelected = 1
+asCoilSelectMeas[0].asList[0].lRxChannelConnected = 1
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[0] = 0xff
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[1] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[2] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[3] = 0xb1
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[0] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[1] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[2] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[3] = 0x2
+asCoilSelectMeas[0].aFFT_SCALE[0].flFactor = 5.90811
+asCoilSelectMeas[0].aFFT_SCALE[0].bValid = 1
+asCoilSelectMeas[0].aFFT_SCALE[0].lRxChannel = 1
+sEFISPEC.bEFIDataValid                   = 1
+ucCineMode                               = 0x1
+ucCoilCombineMode                        = 0x2
+ucFlipAngleMode                          = 0x1
+lTOM                                     = 1
+ucReadOutMode                            = 0x1
+ucBold3dPace                             = 0x1
+ucForcePositioningOnNDIS                 = 0x1
+sParametricMapping.ucParametricMap       = 0x1
+sAsl.ulMode                              = 0x1
+### ASCCONV END ###
+
+</FONT> 
+
+------------------------------
+---End of unit test results---
+------------------------------
+</PRE> </FONT> </BODY> </HTML>
+<HTML>
+<HEAD>
+<TITLE> Sequence Unit Test Results of MiniFLASH </TITLE>
+</HEAD>
+<BODY> <FONT  COLOR=#007000>
+<PRE>
+<H2>Unit Test of 'MiniFLASH'</H2>
+
+Sequence DLL:           b:\n4\x86\prod\bin\MiniFLASH
+Unit source code:       
+Status file:            b:\Measdat\Q-engine
+Protocol:               minFOV2D_UT.pro (created by mephisto)
+Analyzed event blocks:  47
+
+<FONT COLOR=#149275><b>Unit test of MiniFLASH with protocol 'minFOV2D_UT.pro' on Q-engine passed successfully.</b></FONT>
+
+-------------------
+Summary of EGA keys:
+-------------------
+
+TestResult ErrCount  OKCount Abbrev. EGA Requirement Key                 Description
+---------- --------  ------- ------- -------------------                 -----------
+OK--------        0      476 EGA-07  000_EGA_BildOri_SW_OrientierungTest Image orientation
+OK--------        0       48 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Readout gradient polarity
+OK--------        0       48 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Readout gradient amplitude
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (Ky)
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (KyStep)
+OK--------        0        1 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Phase encode gradient amplitude (Ky)
+OK--------        0       96 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Slice select gradient polarity
+OK--------        0       96 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Slice select gradient amplitude
+OK--------        0       48 EGA-05  000_EGA_BildPos_SW_NCOFrequenzSSel  SRF frequency
+OK--------        0       95 EGA-06  000_EGA_BildPos_SW_NCOFrequenzRO    NCO Offcenter Phases
+--N/A-----        0        0 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (Kz)
+OK--------        0       47 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (KzStep)
+--N/A-----        0        0 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Phase encode gradient amplitude (Kz)
+--N/A-----        0        0 EGA-09  N4_EGA_FlussBild_SW_Sequenz         FlowQuant gradient
+--N/A-----        0        0 EGA-10  N4_EGA_FlussBild_SW_NCOPhase        FlowQuant phase
+--N/A-----        0        0 EGA-11  022_EGA_AbbFehler_SW_SpinEchoSequ.  GS ratio of excitation and refoc puls
+
+------------------------------------
+Summary of non-safety-relevant tests:
+------------------------------------
+
+TestResult ErrCount  OKCount Description
+---------- --------  ------- -----------
+OK--------        0       49 08Ws              SAR calculation (Pulse Energy)
+OK--------        0        1 08Us              SAR calculation (Measurement time)
+OK--------        0        5 relevant ADCs     counter == pSeqExpo->getRelevantReadoutsForMeasTime()
+OK--------        0       47 TRClock           TR == pMrProt->data()->alTR
+--N/A-----        0        0 TIClock           TI == pMrProt->data()->alTI
+--N/A-----        0        0 RSatShift         RSat position
+--N/A-----        0        0 RSatThickness     RSat thickness
+--N/A-----        0        0 CSat              CSat
+--N/A-----        0        0 Optfs             Optfs
+--N/A-----        0        0 OptfsPrep         OptfsPrep
+--N/A-----        0        0 MSat              MSat
+--N/A-----        0        0 TSatShift         TSat position
+--N/A-----        0        0 TSatThickness     TSat thickness
+--N/A-----        0        0 IR                IR or SR pulse
+--N/A-----        0        0 DBThickness       DB thickness
+OK--------        0       47 ADCToRFDelay      Sufficient time from ADC to RF 
+OK--------        0       48 RFToADCDelay      Sufficient time from RF  to ADC
+OK--------        0      156 StoredMoments     2D/3D Moments stored successfully
+OK--------        0        4 ExpMeasRawData    Expected 2D/3D raw data measured
+OK--------        0      336 GradDefinition    Gradient definition (ramp times)
+OK--------        0      237 MdhEntries        Correct Mdh entries
+OK--------        0       97 GradMoment        0. gradient moments rephased
+OK--------        0        1 FirstGradMoment   1. gradient moments correct
+OK--------        0        1 TE                TE correct for all contrasts
+OK--------        0       48 ADCToADCDelay     Sufficient time from ADC to ADC
+--N/A-----        0        0 EBToRFDelay       Sufficient time from EB start to RF
+OK--------        0       48 UT consistency    unit test self-check
+--N/A-----        0        0 PhysioHalt count  counter == expected physio halt events
+
+------------------------------- 
+Protocol used for the unit test:
+------------------------------- 
+Number of slices/slabs               = 1
+Number of lines measured             = 48
+Number of partitions measured        = 1
+
+Base resolution                      = 64
+Phase resolution                     = 0.75
+Phase-encoding lines                 = 48
+Phase oversampling                   = 0.00
+Phase partial fourier factor         = 1.00
+3D partitions                        = 1
+Slice oversampling                   = 0.00
+Slice partial fourier factor         = 1.00
+PAT                                  = no PAT (AFPE=1 AF3D=1 RefPE=0 Ref3D=0 RefMode=undefined)
+Phase / Read FOV                     = 100.0 mm / 100.0 mm = 100 % aspect ratio
+Slice/slab thickness                 = 2.0 mm
+Offcenter shifts of  slices/slabs:
+   #  0 :   Read  =   38.8 mm,  Phase  =    6.0 mm
+
+TR                                   =   109.7 ms
+TE                                   =   100.0 ms
+TI                                   = (not used)
+TD                                   = (not used)
+
+Bandwidth                            =    80.0 Hz/Pixel
+Effective dwell time                 =   195.4 us
+
+RSats / TSat                         =  0 / OFF
+FatSup / WaterSup                    = OFF / OFF 
+IR / SR / MTC / DB                   = OFF / OFF / OFF / OFF
+
+Physiologic mode #1                  = NONE
+Physiologic mode #2                  = NONE
+Number of phases                     = 1
+
+
+---------------------
+Image header entries:
+---------------------
+Measurement Time    : 5.27 sec
+Sequence String     : "fl2d1"     (short: "fl")
+
+
+-------------------------------------------------------
+Link to graphic files (Measured lines and partitions)  :
+-------------------------------------------------------
+Graphic : <A HREF = file://b:\n4\x86\prod\bin\MiniFLASH_s00.bmp > b:\n4\x86\prod\bin\MiniFLASH_s00.bmp </a>
+
+
+------------------------------------------------------------------ 
+Description of the exceptions specified by the sequence programmer:
+------------------------------------------------------------------ 
+
+
+
+----------------------------------------------------- 
+Dump of complete protocol...
+----------------------------------------------------- 
+
+<FONT SIZE=-4> 
+
+### ASCCONV BEGIN ###
+ulVersion                                = 0x1dab37c
+tSequenceFileName                        = "b:\n4\x86\prod\bin\MiniFLASH"
+tProtocolName                            = "minFOV2D_UT.pro (created by mephisto)"
+ucTablePositioningMode                   = 0x2
+sProtConsistencyInfo.tMeasuredBaselineString = "000"
+sProtConsistencyInfo.tBaselineString     = "000"
+sProtConsistencyInfo.tSystemType         = "011"
+sProtConsistencyInfo.flNominalB0         = 1.494
+sProtConsistencyInfo.flGMax              = 22
+sProtConsistencyInfo.flRiseTime          = 8
+sProtConsistencyInfo.lMaximumNofRxReceiverChannels = 8
+sGRADSPEC.bEddyCompensationValid         = 1
+sGRADSPEC.bB0CompensationValid           = 1
+sGRADSPEC.bCrossTermCompensationValid    = 1
+sGRADSPEC.bOffsetValid                   = 1
+sGRADSPEC.lDelayX                        = 20
+sGRADSPEC.lDelayY                        = 20
+sGRADSPEC.lDelayZ                        = 20
+sGRADSPEC.bDelayValid                    = 1
+sGRADSPEC.flSensitivityX                 = 6.46e-005
+sGRADSPEC.flSensitivityY                 = 6.43e-005
+sGRADSPEC.flSensitivityZ                 = 7.36e-005
+sGRADSPEC.bSensitivityValid              = 1
+sGRADSPEC.bShimCurrentValid              = 1
+sGRADSPEC.ucMode                         = 0x2
+sTXSPEC.asNucleusInfo[0].tNucleus        = "1H"
+sTXSPEC.asNucleusInfo[0].lFrequency      = 63600000
+sTXSPEC.asNucleusInfo[0].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[0].flReferenceAmplitude = 300
+sTXSPEC.asNucleusInfo[0].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[0].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[0].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[0].bRFPAIndexValid = 1
+sTXSPEC.asNucleusInfo[1].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[1].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[1].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[1].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[1].lRFPAIndex      = -1
+sTXSPEC.asNucleusInfo[1].bRFPAIndexValid = 1
+sTXSPEC.aRFPULSE[0].tName                = "fl_templ_ex"
+sTXSPEC.aRFPULSE[0].bAmplitudeValid      = 0x1
+sTXSPEC.aRFPULSE[0].flAmplitude          = 18.5808
+sTXSPEC.lNoOfTraPulses                   = 1
+sTXSPEC.lBCExcitationMode                = 1
+sTXSPEC.flKDynMagnitudeMin               = 0.5
+sTXSPEC.flKDynMagnitudeMax               = 1.5
+sTXSPEC.flKDynMagnitudeClipLow           = 1
+sTXSPEC.flKDynMagnitudeClipHigh          = 1
+sTXSPEC.flKDynPhaseMax                   = 0.698132
+sTXSPEC.flKDynPhaseClip                  = 0.174533
+sTXSPEC.bKDynValid                       = 1
+sTXSPEC.ucRFPulseType                    = 0x2
+sTXSPEC.ucExcitMode                      = 0x1
+sTXSPEC.ucSimultaneousExcitation         = 0x1
+sRXSPEC.lGain                            = 1
+sRXSPEC.bGainValid                       = 1
+sRXSPEC.alDwellTime[0]                   = 97700
+sAdjData.uiAdjFreMode                    = 0x1
+sAdjData.uiAdjShimMode                   = 0x1
+sAdjData.uiAdjWatSupMode                 = 0x1
+sAdjData.uiAdjMDSMode                    = 0x1
+sAdjData.uiAdjTableTolerance             = 0x1
+alTR[0]                                  = 109740
+lContrasts                               = 1
+alTE[0]                                  = 100000
+acFlowComp[0]                            = 1
+lCombinedEchoes                          = 1
+sSliceArray.asSlice[0].sPosition.dSag    = 10
+sSliceArray.asSlice[0].sPosition.dCor    = 23.4
+sSliceArray.asSlice[0].sPosition.dTra    = -43.4
+sSliceArray.asSlice[0].sNormal.dSag      = 0.1622214211
+sSliceArray.asSlice[0].sNormal.dCor      = 0.9733285268
+sSliceArray.asSlice[0].sNormal.dTra      = -0.1622214211
+sSliceArray.asSlice[0].dThickness        = 2
+sSliceArray.asSlice[0].dPhaseFOV         = 100
+sSliceArray.asSlice[0].dReadoutFOV       = 100
+sSliceArray.lSize                        = 1
+sSliceArray.lCor                         = 1
+sSliceArray.lConc                        = 1
+sSliceArray.ucMode                       = 0x4
+sSliceArray.sTSat.dThickness             = 50
+sGroupArray.asGroup[0].nSize             = 1
+sGroupArray.asGroup[0].dDistFact         = 0.2
+sGroupArray.anMember[1]                  = -1
+sGroupArray.lSize                        = 1
+sGroupArray.sPSat.dThickness             = 50
+sAutoAlign.dAAMatrix[0]                  = 1
+sAutoAlign.dAAMatrix[5]                  = 1
+sAutoAlign.dAAMatrix[10]                 = 1
+sAutoAlign.dAAMatrix[15]                 = 1
+sNavigatorPara.lBreathHoldMeas           = 1
+sNavigatorPara.lRespComp                 = 4
+sBladePara.dBladeCoverage                = 100
+sBladePara.ucMotionCorr                  = 0x2
+sPrepPulses.ucFatSat                     = 0x4
+sPrepPulses.ucWaterSat                   = 0x4
+sPrepPulses.ucInversion                  = 0x4
+sPrepPulses.ucSatRecovery                = 0x1
+sPrepPulses.ucT2Prep                     = 0x1
+sPrepPulses.ucTIScout                    = 0x1
+sPrepPulses.ucFatSatMode                 = 0x2
+sPrepPulses.dDarkBloodThickness          = 200
+sPrepPulses.dDarkBloodFlipAngle          = 200
+sPrepPulses.dT2PrepDuration              = 40
+sPrepPulses.dIRPulseThicknessFactor      = 0.77
+sKSpace.dPhaseResolution                 = 0.75
+sKSpace.dSliceResolution                 = 1
+sKSpace.dAngioDynCentralRegionA          = 20
+sKSpace.dAngioDynSamplingDensityB        = 25
+sKSpace.lBaseResolution                  = 64
+sKSpace.lPhaseEncodingLines              = 48
+sKSpace.lPartitions                      = 64
+sKSpace.lImagesPerSlab                   = 64
+sKSpace.lRadialViews                     = 64
+sKSpace.lRadialInterleavesPerImage       = 2
+sKSpace.lLinesPerShot                    = 1
+sKSpace.unReordering                     = 0x1
+sKSpace.dSeqPhasePartialFourierForSNR    = 1
+sKSpace.ucPhasePartialFourier            = 0x10
+sKSpace.ucSlicePartialFourier            = 0x10
+sKSpace.ucAveragingMode                  = 0x1
+sKSpace.ucMultiSliceMode                 = 0x2
+sKSpace.ucDimension                      = 0x2
+sKSpace.ucTrajectory                     = 0x1
+sKSpace.ucViewSharing                    = 0x1
+sKSpace.ucAsymmetricEchoMode             = 0x1
+sFastImaging.lEPIFactor                  = 1
+sFastImaging.lTurboFactor                = 1
+sFastImaging.lSliceTurboFactor           = 1
+sFastImaging.lSegments                   = 1
+sFastImaging.ulEnableRFSpoiling          = 0x1
+sFastImaging.ucSegmentationMode          = 0x1
+sFastImaging.lShots                      = 1
+sFastImaging.lEchoTrainDuration          = 700
+sPhysioImaging.lSignal1                  = 1
+sPhysioImaging.lMethod1                  = 1
+sPhysioImaging.lSignal2                  = 1
+sPhysioImaging.lMethod2                  = 1
+sPhysioImaging.lPhases                   = 1
+sPhysioImaging.lRetroGatedImages         = 16
+sPhysioImaging.sPhysioECG.lTriggerPulses = 1
+sPhysioImaging.sPhysioECG.lTriggerWindow = 5
+sPhysioImaging.sPhysioECG.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioECG.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioECG.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioECG.lTriggerIntervals = 1
+sPhysioImaging.sPhysioPulse.lTriggerPulses = 1
+sPhysioImaging.sPhysioPulse.lTriggerWindow = 5
+sPhysioImaging.sPhysioPulse.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioPulse.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioPulse.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioPulse.lTriggerIntervals = 1
+sPhysioImaging.sPhysioExt.lTriggerPulses = 1
+sPhysioImaging.sPhysioExt.lTriggerWindow = 5
+sPhysioImaging.sPhysioExt.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioExt.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioExt.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioExt.lTriggerIntervals = 1
+sPhysioImaging.sPhysioResp.lRespGateThreshold = 20
+sPhysioImaging.sPhysioResp.lRespGatePhase = 2
+sPhysioImaging.sPhysioResp.dGatingRatio  = 0.3
+sPhysioImaging.sPhysioNative.ucMode      = 0x1
+sSpecPara.lPhaseCyclingType              = 1
+sSpecPara.lPhaseEncodingType             = 1
+sSpecPara.lRFExcitationBandwidth         = 1
+sSpecPara.ucRemoveOversampling           = 0x1
+sSpecPara.lDecouplingType                = 1
+sSpecPara.lNOEType                       = 1
+sSpecPara.lExcitationType                = 1
+sSpecPara.lSpectralSuppression           = 1
+sDiffusion.ulMode                        = 0x1
+sAngio.ucPCFlowMode                      = 0x2
+sAngio.ucTOFInflow                       = 0x4
+sAngio.lDynamicReconMode                 = 1
+sAngio.lTemporalInterpolation            = 1
+sDistortionCorrFilter.ucMode             = 0x1
+sPat.lAccelFactPE                        = 1
+sPat.lAccelFact3D                        = 1
+sPat.ucPATMode                           = 0x1
+sPat.ucRefScanMode                       = 0x1
+sMDS.ulMdsModeMask                       = 0x1
+sMDS.sMdsEndPosSBCS_mm.dTra              = 600
+sMDS.ulMdsReconMode                      = 0x1
+sMDS.dMdsRangeExtension                  = 600
+ucEnableIntro                            = 0x1
+ucDisableChangeStoreImages               = 0x1
+ucReconstructionMode                     = 0x1
+ucOneSeriesForAllMeas                    = 0x1
+ucPHAPSMode                              = 0x1
+ucDixon                                  = 0x1
+ucDixonSaveOriginal                      = 0x1
+lAverages                                = 1
+dAveragesDouble                          = 1
+adFlipAngleDegree[0]                     = 10
+lScanTimeSec                             = 5
+lTotalScanTimeSec                        = 5
+dRefSNR                                  = 430574.3688
+dRefSNR_VOI                              = 430574.3688
+tdefaultEVAProt                          = "%SiemensEvaDefProt%\Inline\Inline.evp"
+asCoilSelectMeas[0].tNucleus             = "1H"
+asCoilSelectMeas[0].iUsedRFactor         = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tCoilID = "Body"
+asCoilSelectMeas[0].asList[0].sCoilElementID.lCoilCopy = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tElement = "BC"
+asCoilSelectMeas[0].asList[0].lElementSelected = 1
+asCoilSelectMeas[0].asList[0].lRxChannelConnected = 1
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[0] = 0xff
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[1] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[2] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[3] = 0xb1
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[0] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[1] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[2] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[3] = 0x2
+asCoilSelectMeas[0].aFFT_SCALE[0].flFactor = 54.0672
+asCoilSelectMeas[0].aFFT_SCALE[0].bValid = 1
+asCoilSelectMeas[0].aFFT_SCALE[0].lRxChannel = 1
+sEFISPEC.bEFIDataValid                   = 1
+ucCineMode                               = 0x1
+ucCoilCombineMode                        = 0x2
+ucFlipAngleMode                          = 0x1
+lTOM                                     = 1
+ucReadOutMode                            = 0x1
+ucBold3dPace                             = 0x1
+ucForcePositioningOnNDIS                 = 0x1
+sParametricMapping.ucParametricMap       = 0x1
+sAsl.ulMode                              = 0x1
+### ASCCONV END ###
+
+</FONT> 
+
+------------------------------
+---End of unit test results---
+------------------------------
+</PRE> </FONT> </BODY> </HTML>
+<HTML>
+<HEAD>
+<TITLE> Sequence Unit Test Results of MiniFLASH </TITLE>
+</HEAD>
+<BODY> <FONT  COLOR=#007000>
+<PRE>
+<H2>Unit Test of 'MiniFLASH'</H2>
+
+Sequence DLL:           b:\n4\x86\prod\bin\MiniFLASH
+Unit source code:       
+Status file:            b:\Measdat\Q-engine
+Protocol:               minTE2D_UT.pro (created by mephisto)
+Analyzed event blocks:  47
+
+<FONT COLOR=#149275><b>Unit test of MiniFLASH with protocol 'minTE2D_UT.pro' on Q-engine passed successfully.</b></FONT>
+
+-------------------
+Summary of EGA keys:
+-------------------
+
+TestResult ErrCount  OKCount Abbrev. EGA Requirement Key                 Description
+---------- --------  ------- ------- -------------------                 -----------
+OK--------        0      476 EGA-07  000_EGA_BildOri_SW_OrientierungTest Image orientation
+OK--------        0       48 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Readout gradient polarity
+OK--------        0       48 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Readout gradient amplitude
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (Ky)
+OK--------        0       46 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (KyStep)
+OK--------        0        1 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Phase encode gradient amplitude (Ky)
+OK--------        0       96 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Slice select gradient polarity
+OK--------        0       96 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Slice select gradient amplitude
+OK--------        0       48 EGA-05  000_EGA_BildPos_SW_NCOFrequenzSSel  SRF frequency
+OK--------        0       95 EGA-06  000_EGA_BildPos_SW_NCOFrequenzRO    NCO Offcenter Phases
+--N/A-----        0        0 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (Kz)
+OK--------        0       47 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (KzStep)
+--N/A-----        0        0 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Phase encode gradient amplitude (Kz)
+--N/A-----        0        0 EGA-09  N4_EGA_FlussBild_SW_Sequenz         FlowQuant gradient
+--N/A-----        0        0 EGA-10  N4_EGA_FlussBild_SW_NCOPhase        FlowQuant phase
+--N/A-----        0        0 EGA-11  022_EGA_AbbFehler_SW_SpinEchoSequ.  GS ratio of excitation and refoc puls
+
+------------------------------------
+Summary of non-safety-relevant tests:
+------------------------------------
+
+TestResult ErrCount  OKCount Description
+---------- --------  ------- -----------
+OK--------        0       49 08Ws              SAR calculation (Pulse Energy)
+OK--------        0        1 08Us              SAR calculation (Measurement time)
+--N/A-----        0        0 relevant ADCs     counter == pSeqExpo->getRelevantReadoutsForMeasTime()
+OK--------        0       47 TRClock           TR == pMrProt->data()->alTR
+--N/A-----        0        0 TIClock           TI == pMrProt->data()->alTI
+--N/A-----        0        0 RSatShift         RSat position
+--N/A-----        0        0 RSatThickness     RSat thickness
+--N/A-----        0        0 CSat              CSat
+--N/A-----        0        0 Optfs             Optfs
+--N/A-----        0        0 OptfsPrep         OptfsPrep
+--N/A-----        0        0 MSat              MSat
+--N/A-----        0        0 TSatShift         TSat position
+--N/A-----        0        0 TSatThickness     TSat thickness
+--N/A-----        0        0 IR                IR or SR pulse
+--N/A-----        0        0 DBThickness       DB thickness
+OK--------        0       47 ADCToRFDelay      Sufficient time from ADC to RF 
+OK--------        0       48 RFToADCDelay      Sufficient time from RF  to ADC
+OK--------        0      156 StoredMoments     2D/3D Moments stored successfully
+OK--------        0        4 ExpMeasRawData    Expected 2D/3D raw data measured
+OK--------        0      336 GradDefinition    Gradient definition (ramp times)
+OK--------        0      237 MdhEntries        Correct Mdh entries
+OK--------        0       97 GradMoment        0. gradient moments rephased
+OK--------        0        1 FirstGradMoment   1. gradient moments correct
+OK--------        0        1 TE                TE correct for all contrasts
+OK--------        0       48 ADCToADCDelay     Sufficient time from ADC to ADC
+--N/A-----        0        0 EBToRFDelay       Sufficient time from EB start to RF
+OK--------        0       48 UT consistency    unit test self-check
+--N/A-----        0        0 PhysioHalt count  counter == expected physio halt events
+
+------------------------------- 
+Protocol used for the unit test:
+------------------------------- 
+Number of slices/slabs               = 1
+Number of lines measured             = 48
+Number of partitions measured        = 1
+
+Base resolution                      = 64
+Phase resolution                     = 0.75
+Phase-encoding lines                 = 48
+Phase oversampling                   = 0.00
+Phase partial fourier factor         = 1.00
+3D partitions                        = 1
+Slice oversampling                   = 0.00
+Slice partial fourier factor         = 1.00
+PAT                                  = no PAT (AFPE=1 AF3D=1 RefPE=0 Ref3D=0 RefMode=undefined)
+Phase / Read FOV                     = 100.0 mm / 100.0 mm = 100 % aspect ratio
+Slice/slab thickness                 = 10.0 mm
+Offcenter shifts of  slices/slabs:
+   #  0 :   Read  =   38.8 mm,  Phase  =    6.0 mm
+
+TR                                   =     8.1 ms
+TE                                   =     4.0 ms
+TI                                   = (not used)
+TD                                   = (not used)
+
+Bandwidth                            =   898.0 Hz/Pixel
+Effective dwell time                 =    17.4 us
+
+RSats / TSat                         =  0 / OFF
+FatSup / WaterSup                    = OFF / OFF 
+IR / SR / MTC / DB                   = OFF / OFF / OFF / OFF
+
+Physiologic mode #1                  = NONE
+Physiologic mode #2                  = NONE
+Number of phases                     = 1
+
+
+---------------------
+Image header entries:
+---------------------
+Measurement Time    : 0.39 sec
+Sequence String     : "fl2d1"     (short: "fl")
+
+
+-------------------------------------------------------
+Link to graphic files (Measured lines and partitions)  :
+-------------------------------------------------------
+Graphic : <A HREF = file://b:\n4\x86\prod\bin\MiniFLASH_s00.bmp > b:\n4\x86\prod\bin\MiniFLASH_s00.bmp </a>
+
+
+------------------------------------------------------------------ 
+Description of the exceptions specified by the sequence programmer:
+------------------------------------------------------------------ 
+
+
+
+----------------------------------------------------- 
+Dump of complete protocol...
+----------------------------------------------------- 
+
+<FONT SIZE=-4> 
+
+### ASCCONV BEGIN ###
+ulVersion                                = 0x1dab37c
+tSequenceFileName                        = "b:\n4\x86\prod\bin\MiniFLASH"
+tProtocolName                            = "minTE2D_UT.pro (created by mephisto)"
+ucTablePositioningMode                   = 0x2
+sProtConsistencyInfo.tMeasuredBaselineString = "000"
+sProtConsistencyInfo.tBaselineString     = "000"
+sProtConsistencyInfo.tSystemType         = "011"
+sProtConsistencyInfo.flNominalB0         = 1.494
+sProtConsistencyInfo.flGMax              = 22
+sProtConsistencyInfo.flRiseTime          = 8
+sProtConsistencyInfo.lMaximumNofRxReceiverChannels = 8
+sGRADSPEC.bEddyCompensationValid         = 1
+sGRADSPEC.bB0CompensationValid           = 1
+sGRADSPEC.bCrossTermCompensationValid    = 1
+sGRADSPEC.bOffsetValid                   = 1
+sGRADSPEC.lDelayX                        = 20
+sGRADSPEC.lDelayY                        = 20
+sGRADSPEC.lDelayZ                        = 20
+sGRADSPEC.bDelayValid                    = 1
+sGRADSPEC.flSensitivityX                 = 6.46e-005
+sGRADSPEC.flSensitivityY                 = 6.43e-005
+sGRADSPEC.flSensitivityZ                 = 7.36e-005
+sGRADSPEC.bSensitivityValid              = 1
+sGRADSPEC.bShimCurrentValid              = 1
+sGRADSPEC.ucMode                         = 0x2
+sTXSPEC.asNucleusInfo[0].tNucleus        = "1H"
+sTXSPEC.asNucleusInfo[0].lFrequency      = 63600000
+sTXSPEC.asNucleusInfo[0].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[0].flReferenceAmplitude = 300
+sTXSPEC.asNucleusInfo[0].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[0].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[0].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[0].bRFPAIndexValid = 1
+sTXSPEC.asNucleusInfo[1].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[1].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[1].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[1].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[1].lRFPAIndex      = -1
+sTXSPEC.asNucleusInfo[1].bRFPAIndexValid = 1
+sTXSPEC.aRFPULSE[0].tName                = "fl_templ_ex"
+sTXSPEC.aRFPULSE[0].bAmplitudeValid      = 0x1
+sTXSPEC.aRFPULSE[0].flAmplitude          = 148.646
+sTXSPEC.lNoOfTraPulses                   = 1
+sTXSPEC.lBCExcitationMode                = 1
+sTXSPEC.flKDynMagnitudeMin               = 0.5
+sTXSPEC.flKDynMagnitudeMax               = 1.5
+sTXSPEC.flKDynMagnitudeClipLow           = 1
+sTXSPEC.flKDynMagnitudeClipHigh          = 1
+sTXSPEC.flKDynPhaseMax                   = 0.698132
+sTXSPEC.flKDynPhaseClip                  = 0.174533
+sTXSPEC.bKDynValid                       = 1
+sTXSPEC.ucRFPulseType                    = 0x2
+sTXSPEC.ucExcitMode                      = 0x1
+sTXSPEC.ucSimultaneousExcitation         = 0x1
+sRXSPEC.lGain                            = 1
+sRXSPEC.bGainValid                       = 1
+sRXSPEC.alDwellTime[0]                   = 8700
+sAdjData.uiAdjFreMode                    = 0x1
+sAdjData.uiAdjShimMode                   = 0x1
+sAdjData.uiAdjWatSupMode                 = 0x1
+sAdjData.uiAdjMDSMode                    = 0x1
+sAdjData.uiAdjTableTolerance             = 0x1
+alTR[0]                                  = 8090
+lContrasts                               = 1
+alTE[0]                                  = 4040
+acFlowComp[0]                            = 1
+lCombinedEchoes                          = 1
+sSliceArray.asSlice[0].sPosition.dSag    = 10
+sSliceArray.asSlice[0].sPosition.dCor    = 23.4
+sSliceArray.asSlice[0].sPosition.dTra    = -43.4
+sSliceArray.asSlice[0].sNormal.dSag      = 0.1622214211
+sSliceArray.asSlice[0].sNormal.dCor      = 0.9733285268
+sSliceArray.asSlice[0].sNormal.dTra      = -0.1622214211
+sSliceArray.asSlice[0].dThickness        = 10
+sSliceArray.asSlice[0].dPhaseFOV         = 100
+sSliceArray.asSlice[0].dReadoutFOV       = 100
+sSliceArray.lSize                        = 1
+sSliceArray.lCor                         = 1
+sSliceArray.lConc                        = 1
+sSliceArray.ucMode                       = 0x4
+sSliceArray.sTSat.dThickness             = 50
+sGroupArray.asGroup[0].nSize             = 1
+sGroupArray.asGroup[0].dDistFact         = 0.2
+sGroupArray.anMember[1]                  = -1
+sGroupArray.lSize                        = 1
+sGroupArray.sPSat.dThickness             = 50
+sAutoAlign.dAAMatrix[0]                  = 1
+sAutoAlign.dAAMatrix[5]                  = 1
+sAutoAlign.dAAMatrix[10]                 = 1
+sAutoAlign.dAAMatrix[15]                 = 1
+sNavigatorPara.lBreathHoldMeas           = 1
+sNavigatorPara.lRespComp                 = 4
+sBladePara.dBladeCoverage                = 100
+sBladePara.ucMotionCorr                  = 0x2
+sPrepPulses.ucFatSat                     = 0x4
+sPrepPulses.ucWaterSat                   = 0x4
+sPrepPulses.ucInversion                  = 0x4
+sPrepPulses.ucSatRecovery                = 0x1
+sPrepPulses.ucT2Prep                     = 0x1
+sPrepPulses.ucTIScout                    = 0x1
+sPrepPulses.ucFatSatMode                 = 0x2
+sPrepPulses.dDarkBloodThickness          = 200
+sPrepPulses.dDarkBloodFlipAngle          = 200
+sPrepPulses.dT2PrepDuration              = 40
+sPrepPulses.dIRPulseThicknessFactor      = 0.77
+sKSpace.dPhaseResolution                 = 0.75
+sKSpace.dSliceResolution                 = 1
+sKSpace.dAngioDynCentralRegionA          = 20
+sKSpace.dAngioDynSamplingDensityB        = 25
+sKSpace.lBaseResolution                  = 64
+sKSpace.lPhaseEncodingLines              = 48
+sKSpace.lPartitions                      = 64
+sKSpace.lImagesPerSlab                   = 64
+sKSpace.lRadialViews                     = 64
+sKSpace.lRadialInterleavesPerImage       = 2
+sKSpace.lLinesPerShot                    = 1
+sKSpace.unReordering                     = 0x1
+sKSpace.dSeqPhasePartialFourierForSNR    = 1
+sKSpace.ucPhasePartialFourier            = 0x10
+sKSpace.ucSlicePartialFourier            = 0x10
+sKSpace.ucAveragingMode                  = 0x1
+sKSpace.ucMultiSliceMode                 = 0x2
+sKSpace.ucDimension                      = 0x2
+sKSpace.ucTrajectory                     = 0x1
+sKSpace.ucViewSharing                    = 0x1
+sKSpace.ucAsymmetricEchoMode             = 0x1
+sFastImaging.lEPIFactor                  = 1
+sFastImaging.lTurboFactor                = 1
+sFastImaging.lSliceTurboFactor           = 1
+sFastImaging.lSegments                   = 1
+sFastImaging.ulEnableRFSpoiling          = 0x1
+sFastImaging.ucSegmentationMode          = 0x1
+sFastImaging.lShots                      = 1
+sFastImaging.lEchoTrainDuration          = 700
+sPhysioImaging.lSignal1                  = 1
+sPhysioImaging.lMethod1                  = 1
+sPhysioImaging.lSignal2                  = 1
+sPhysioImaging.lMethod2                  = 1
+sPhysioImaging.lPhases                   = 1
+sPhysioImaging.lRetroGatedImages         = 16
+sPhysioImaging.sPhysioECG.lTriggerPulses = 1
+sPhysioImaging.sPhysioECG.lTriggerWindow = 5
+sPhysioImaging.sPhysioECG.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioECG.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioECG.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioECG.lTriggerIntervals = 1
+sPhysioImaging.sPhysioPulse.lTriggerPulses = 1
+sPhysioImaging.sPhysioPulse.lTriggerWindow = 5
+sPhysioImaging.sPhysioPulse.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioPulse.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioPulse.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioPulse.lTriggerIntervals = 1
+sPhysioImaging.sPhysioExt.lTriggerPulses = 1
+sPhysioImaging.sPhysioExt.lTriggerWindow = 5
+sPhysioImaging.sPhysioExt.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioExt.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioExt.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioExt.lTriggerIntervals = 1
+sPhysioImaging.sPhysioResp.lRespGateThreshold = 20
+sPhysioImaging.sPhysioResp.lRespGatePhase = 2
+sPhysioImaging.sPhysioResp.dGatingRatio  = 0.3
+sPhysioImaging.sPhysioNative.ucMode      = 0x1
+sSpecPara.lPhaseCyclingType              = 1
+sSpecPara.lPhaseEncodingType             = 1
+sSpecPara.lRFExcitationBandwidth         = 1
+sSpecPara.ucRemoveOversampling           = 0x1
+sSpecPara.lDecouplingType                = 1
+sSpecPara.lNOEType                       = 1
+sSpecPara.lExcitationType                = 1
+sSpecPara.lSpectralSuppression           = 1
+sDiffusion.ulMode                        = 0x1
+sAngio.ucPCFlowMode                      = 0x2
+sAngio.ucTOFInflow                       = 0x4
+sAngio.lDynamicReconMode                 = 1
+sAngio.lTemporalInterpolation            = 1
+sDistortionCorrFilter.ucMode             = 0x1
+sPat.lAccelFactPE                        = 1
+sPat.lAccelFact3D                        = 1
+sPat.ucPATMode                           = 0x1
+sPat.ucRefScanMode                       = 0x1
+sMDS.ulMdsModeMask                       = 0x1
+sMDS.sMdsEndPosSBCS_mm.dTra              = 600
+sMDS.ulMdsReconMode                      = 0x1
+sMDS.dMdsRangeExtension                  = 600
+ucEnableIntro                            = 0x1
+ucDisableChangeStoreImages               = 0x1
+ucReconstructionMode                     = 0x1
+ucOneSeriesForAllMeas                    = 0x1
+ucPHAPSMode                              = 0x1
+ucDixon                                  = 0x1
+ucDixonSaveOriginal                      = 0x1
+lAverages                                = 1
+dAveragesDouble                          = 1
+adFlipAngleDegree[0]                     = 80
+dRefSNR                                  = 430574.3688
+dRefSNR_VOI                              = 430574.3688
+tdefaultEVAProt                          = "%SiemensEvaDefProt%\Inline\Inline.evp"
+asCoilSelectMeas[0].tNucleus             = "1H"
+asCoilSelectMeas[0].iUsedRFactor         = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tCoilID = "Body"
+asCoilSelectMeas[0].asList[0].sCoilElementID.lCoilCopy = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tElement = "BC"
+asCoilSelectMeas[0].asList[0].lElementSelected = 1
+asCoilSelectMeas[0].asList[0].lRxChannelConnected = 1
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[0] = 0xff
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[1] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[2] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[3] = 0xb1
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[0] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[1] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[2] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[3] = 0x2
+asCoilSelectMeas[0].aFFT_SCALE[0].flFactor = 10.8134
+asCoilSelectMeas[0].aFFT_SCALE[0].bValid = 1
+asCoilSelectMeas[0].aFFT_SCALE[0].lRxChannel = 1
+sEFISPEC.bEFIDataValid                   = 1
+ucCineMode                               = 0x1
+ucCoilCombineMode                        = 0x2
+ucFlipAngleMode                          = 0x1
+lTOM                                     = 1
+ucReadOutMode                            = 0x1
+ucBold3dPace                             = 0x1
+ucForcePositioningOnNDIS                 = 0x1
+sParametricMapping.ucParametricMap       = 0x1
+sAsl.ulMode                              = 0x1
+### ASCCONV END ###
+
+</FONT> 
+
+------------------------------
+---End of unit test results---
+------------------------------
+</PRE> </FONT> </BODY> </HTML>
+<HTML>
+<HEAD>
+<TITLE> Sequence Unit Test Results of MiniFLASH </TITLE>
+</HEAD>
+<BODY> <FONT  COLOR=#007000>
+<PRE>
+<H2>Unit Test of 'MiniFLASH'</H2>
+
+Sequence DLL:           b:\n4\x86\prod\bin\MiniFLASH
+Unit source code:       
+Status file:            b:\Measdat\Q-engine
+Protocol:               standard2D_UT.pro (created by mephisto)
+Analyzed event blocks:  191
+
+<FONT COLOR=#149275><b>Unit test of MiniFLASH with protocol 'standard2D_UT.pro' on Q-engine passed successfully.</b></FONT>
+
+-------------------
+Summary of EGA keys:
+-------------------
+
+TestResult ErrCount  OKCount Abbrev. EGA Requirement Key                 Description
+---------- --------  ------- ------- -------------------                 -----------
+OK--------        0     1916 EGA-07  000_EGA_BildOri_SW_OrientierungTest Image orientation
+OK--------        0      192 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Readout gradient polarity
+OK--------        0      192 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Readout gradient amplitude
+OK--------        0      190 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (Ky)
+OK--------        0      190 EGA-01  000_EGA_BildOri_SW_SequenzROVz      Phase encode gradient polarity  (KyStep)
+OK--------        0        1 EGA-03  000_EGA_BildMass_SW_SequenzROPC     Phase encode gradient amplitude (Ky)
+OK--------        0      384 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Slice select gradient polarity
+OK--------        0      384 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Slice select gradient amplitude
+OK--------        0      192 EGA-05  000_EGA_BildPos_SW_NCOFrequenzSSel  SRF frequency
+OK--------        0      383 EGA-06  000_EGA_BildPos_SW_NCOFrequenzRO    NCO Offcenter Phases
+--N/A-----        0        0 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (Kz)
+OK--------        0      191 EGA-02  000_EGA_BildPos_SW_SequenzSSelVz    Phase encode gradient polarity  (KzStep)
+--N/A-----        0        0 EGA-04  000_EGA_BildPos_SW_SequenzSSel      Phase encode gradient amplitude (Kz)
+--N/A-----        0        0 EGA-09  N4_EGA_FlussBild_SW_Sequenz         FlowQuant gradient
+--N/A-----        0        0 EGA-10  N4_EGA_FlussBild_SW_NCOPhase        FlowQuant phase
+--N/A-----        0        0 EGA-11  022_EGA_AbbFehler_SW_SpinEchoSequ.  GS ratio of excitation and refoc puls
+
+------------------------------------
+Summary of non-safety-relevant tests:
+------------------------------------
+
+TestResult ErrCount  OKCount Description
+---------- --------  ------- -----------
+OK--------        0      193 08Ws              SAR calculation (Pulse Energy)
+OK--------        0        1 08Us              SAR calculation (Measurement time)
+OK--------        0        4 relevant ADCs     counter == pSeqExpo->getRelevantReadoutsForMeasTime()
+OK--------        0      191 TRClock           TR == pMrProt->data()->alTR
+--N/A-----        0        0 TIClock           TI == pMrProt->data()->alTI
+--N/A-----        0        0 RSatShift         RSat position
+--N/A-----        0        0 RSatThickness     RSat thickness
+--N/A-----        0        0 CSat              CSat
+--N/A-----        0        0 Optfs             Optfs
+--N/A-----        0        0 OptfsPrep         OptfsPrep
+--N/A-----        0        0 MSat              MSat
+--N/A-----        0        0 TSatShift         TSat position
+--N/A-----        0        0 TSatThickness     TSat thickness
+--N/A-----        0        0 IR                IR or SR pulse
+--N/A-----        0        0 DBThickness       DB thickness
+OK--------        0      191 ADCToRFDelay      Sufficient time from ADC to RF 
+OK--------        0      192 RFToADCDelay      Sufficient time from RF  to ADC
+OK--------        0      588 StoredMoments     2D/3D Moments stored successfully
+OK--------        0        4 ExpMeasRawData    Expected 2D/3D raw data measured
+OK--------        0     1344 GradDefinition    Gradient definition (ramp times)
+OK--------        0      813 MdhEntries        Correct Mdh entries
+OK--------        0      385 GradMoment        0. gradient moments rephased
+OK--------        0        1 FirstGradMoment   1. gradient moments correct
+OK--------        0        1 TE                TE correct for all contrasts
+OK--------        0      192 ADCToADCDelay     Sufficient time from ADC to ADC
+--N/A-----        0        0 EBToRFDelay       Sufficient time from EB start to RF
+OK--------        0      192 UT consistency    unit test self-check
+--N/A-----        0        0 PhysioHalt count  counter == expected physio halt events
+
+------------------------------- 
+Protocol used for the unit test:
+------------------------------- 
+Number of slices/slabs               = 1
+Number of lines measured             = 192
+Number of partitions measured        = 1
+
+Base resolution                      = 256
+Phase resolution                     = 0.75
+Phase-encoding lines                 = 192
+Phase oversampling                   = 0.00
+Phase partial fourier factor         = 1.00
+3D partitions                        = 1
+Slice oversampling                   = 0.00
+Slice partial fourier factor         = 1.00
+PAT                                  = no PAT (AFPE=1 AF3D=1 RefPE=0 Ref3D=0 RefMode=undefined)
+Phase / Read FOV                     = 247.0 mm / 247.0 mm = 100 % aspect ratio
+Slice/slab thickness                 = 3.0 mm
+Offcenter shifts of  slices/slabs:
+   #  0 :   Read  =  -10.0 mm,  Phase  =   23.4 mm
+
+TR                                   =    25.4 ms
+TE                                   =    20.0 ms
+TI                                   = (not used)
+TD                                   = (not used)
+
+Bandwidth                            =   260.4 Hz/Pixel
+Effective dwell time                 =    15.0 us
+
+RSats / TSat                         =  0 / OFF
+FatSup / WaterSup                    = OFF / OFF 
+IR / SR / MTC / DB                   = OFF / OFF / OFF / OFF
+
+Physiologic mode #1                  = NONE
+Physiologic mode #2                  = NONE
+Number of phases                     = 1
+
+
+---------------------
+Image header entries:
+---------------------
+Measurement Time    : 4.88 sec
+Sequence String     : "fl2d1"     (short: "fl")
+
+
+-------------------------------------------------------
+Link to graphic files (Measured lines and partitions)  :
+-------------------------------------------------------
+Graphic : <A HREF = file://b:\n4\x86\prod\bin\MiniFLASH_s00.bmp > b:\n4\x86\prod\bin\MiniFLASH_s00.bmp </a>
+
+
+------------------------------------------------------------------ 
+Description of the exceptions specified by the sequence programmer:
+------------------------------------------------------------------ 
+
+
+
+----------------------------------------------------- 
+Dump of complete protocol...
+----------------------------------------------------- 
+
+<FONT SIZE=-4> 
+
+### ASCCONV BEGIN ###
+ulVersion                                = 0x1dab37c
+tSequenceFileName                        = "b:\n4\x86\prod\bin\MiniFLASH"
+tProtocolName                            = "standard2D_UT.pro (created by mephisto)"
+ucTablePositioningMode                   = 0x2
+sProtConsistencyInfo.tMeasuredBaselineString = "000"
+sProtConsistencyInfo.tBaselineString     = "000"
+sProtConsistencyInfo.tSystemType         = "011"
+sProtConsistencyInfo.flNominalB0         = 1.494
+sProtConsistencyInfo.flGMax              = 22
+sProtConsistencyInfo.flRiseTime          = 8
+sProtConsistencyInfo.lMaximumNofRxReceiverChannels = 8
+sGRADSPEC.bEddyCompensationValid         = 1
+sGRADSPEC.bB0CompensationValid           = 1
+sGRADSPEC.bCrossTermCompensationValid    = 1
+sGRADSPEC.bOffsetValid                   = 1
+sGRADSPEC.lDelayX                        = 20
+sGRADSPEC.lDelayY                        = 20
+sGRADSPEC.lDelayZ                        = 20
+sGRADSPEC.bDelayValid                    = 1
+sGRADSPEC.flSensitivityX                 = 6.46e-005
+sGRADSPEC.flSensitivityY                 = 6.43e-005
+sGRADSPEC.flSensitivityZ                 = 7.36e-005
+sGRADSPEC.bSensitivityValid              = 1
+sGRADSPEC.bShimCurrentValid              = 1
+sGRADSPEC.ucMode                         = 0x2
+sTXSPEC.asNucleusInfo[0].tNucleus        = "1H"
+sTXSPEC.asNucleusInfo[0].lFrequency      = 63600000
+sTXSPEC.asNucleusInfo[0].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[0].flReferenceAmplitude = 300
+sTXSPEC.asNucleusInfo[0].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[0].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[0].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[0].bRFPAIndexValid = 1
+sTXSPEC.asNucleusInfo[1].bFrequencyValid = 1
+sTXSPEC.asNucleusInfo[1].bReferenceAmplitudeValid = 1
+sTXSPEC.asNucleusInfo[1].flAmplitudeCorrection = 1
+sTXSPEC.asNucleusInfo[1].bAmplitudeCorrectionValid = 1
+sTXSPEC.asNucleusInfo[1].lRFPAIndex      = -1
+sTXSPEC.asNucleusInfo[1].bRFPAIndexValid = 1
+sTXSPEC.aRFPULSE[0].tName                = "fl_templ_ex"
+sTXSPEC.aRFPULSE[0].bAmplitudeValid      = 0x1
+sTXSPEC.aRFPULSE[0].flAmplitude          = 148.646
+sTXSPEC.lNoOfTraPulses                   = 1
+sTXSPEC.lBCExcitationMode                = 1
+sTXSPEC.flKDynMagnitudeMin               = 0.5
+sTXSPEC.flKDynMagnitudeMax               = 1.5
+sTXSPEC.flKDynMagnitudeClipLow           = 1
+sTXSPEC.flKDynMagnitudeClipHigh          = 1
+sTXSPEC.flKDynPhaseMax                   = 0.698132
+sTXSPEC.flKDynPhaseClip                  = 0.174533
+sTXSPEC.bKDynValid                       = 1
+sTXSPEC.ucRFPulseType                    = 0x2
+sTXSPEC.ucExcitMode                      = 0x1
+sTXSPEC.ucSimultaneousExcitation         = 0x1
+sRXSPEC.lGain                            = 1
+sRXSPEC.bGainValid                       = 1
+sRXSPEC.alDwellTime[0]                   = 7500
+sAdjData.uiAdjFreMode                    = 0x1
+sAdjData.uiAdjShimMode                   = 0x1
+sAdjData.uiAdjWatSupMode                 = 0x1
+sAdjData.uiAdjMDSMode                    = 0x1
+sAdjData.uiAdjTableTolerance             = 0x1
+alTR[0]                                  = 25400
+lContrasts                               = 1
+alTE[0]                                  = 20000
+acFlowComp[0]                            = 1
+lCombinedEchoes                          = 1
+sSliceArray.asSlice[0].sPosition.dSag    = 10
+sSliceArray.asSlice[0].sPosition.dCor    = 23.4
+sSliceArray.asSlice[0].sPosition.dTra    = -43.4
+sSliceArray.asSlice[0].sNormal.dTra      = 1
+sSliceArray.asSlice[0].dThickness        = 3
+sSliceArray.asSlice[0].dPhaseFOV         = 247
+sSliceArray.asSlice[0].dReadoutFOV       = 247
+sSliceArray.lSize                        = 1
+sSliceArray.lConc                        = 1
+sSliceArray.ucMode                       = 0x4
+sSliceArray.sTSat.dThickness             = 50
+sGroupArray.asGroup[0].nSize             = 1
+sGroupArray.asGroup[0].dDistFact         = 0.2
+sGroupArray.anMember[1]                  = -1
+sGroupArray.lSize                        = 1
+sGroupArray.sPSat.dThickness             = 50
+sAutoAlign.dAAMatrix[0]                  = 1
+sAutoAlign.dAAMatrix[5]                  = 1
+sAutoAlign.dAAMatrix[10]                 = 1
+sAutoAlign.dAAMatrix[15]                 = 1
+sNavigatorPara.lBreathHoldMeas           = 1
+sNavigatorPara.lRespComp                 = 4
+sBladePara.dBladeCoverage                = 100
+sBladePara.ucMotionCorr                  = 0x2
+sPrepPulses.ucFatSat                     = 0x4
+sPrepPulses.ucWaterSat                   = 0x4
+sPrepPulses.ucInversion                  = 0x4
+sPrepPulses.ucSatRecovery                = 0x1
+sPrepPulses.ucT2Prep                     = 0x1
+sPrepPulses.ucTIScout                    = 0x1
+sPrepPulses.ucFatSatMode                 = 0x2
+sPrepPulses.dDarkBloodThickness          = 200
+sPrepPulses.dDarkBloodFlipAngle          = 200
+sPrepPulses.dT2PrepDuration              = 40
+sPrepPulses.dIRPulseThicknessFactor      = 0.77
+sKSpace.dPhaseResolution                 = 0.75
+sKSpace.dSliceResolution                 = 1
+sKSpace.dAngioDynCentralRegionA          = 20
+sKSpace.dAngioDynSamplingDensityB        = 25
+sKSpace.lBaseResolution                  = 256
+sKSpace.lPhaseEncodingLines              = 192
+sKSpace.lPartitions                      = 64
+sKSpace.lImagesPerSlab                   = 64
+sKSpace.lRadialViews                     = 64
+sKSpace.lRadialInterleavesPerImage       = 2
+sKSpace.lLinesPerShot                    = 1
+sKSpace.unReordering                     = 0x1
+sKSpace.dSeqPhasePartialFourierForSNR    = 1
+sKSpace.ucPhasePartialFourier            = 0x10
+sKSpace.ucSlicePartialFourier            = 0x10
+sKSpace.ucAveragingMode                  = 0x1
+sKSpace.ucMultiSliceMode                 = 0x2
+sKSpace.ucDimension                      = 0x2
+sKSpace.ucTrajectory                     = 0x1
+sKSpace.ucViewSharing                    = 0x1
+sKSpace.ucAsymmetricEchoMode             = 0x1
+sFastImaging.lEPIFactor                  = 1
+sFastImaging.lTurboFactor                = 1
+sFastImaging.lSliceTurboFactor           = 1
+sFastImaging.lSegments                   = 1
+sFastImaging.ulEnableRFSpoiling          = 0x1
+sFastImaging.ucSegmentationMode          = 0x1
+sFastImaging.lShots                      = 1
+sFastImaging.lEchoTrainDuration          = 700
+sPhysioImaging.lSignal1                  = 1
+sPhysioImaging.lMethod1                  = 1
+sPhysioImaging.lSignal2                  = 1
+sPhysioImaging.lMethod2                  = 1
+sPhysioImaging.lPhases                   = 1
+sPhysioImaging.lRetroGatedImages         = 16
+sPhysioImaging.sPhysioECG.lTriggerPulses = 1
+sPhysioImaging.sPhysioECG.lTriggerWindow = 5
+sPhysioImaging.sPhysioECG.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioECG.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioECG.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioECG.lTriggerIntervals = 1
+sPhysioImaging.sPhysioPulse.lTriggerPulses = 1
+sPhysioImaging.sPhysioPulse.lTriggerWindow = 5
+sPhysioImaging.sPhysioPulse.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioPulse.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioPulse.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioPulse.lTriggerIntervals = 1
+sPhysioImaging.sPhysioExt.lTriggerPulses = 1
+sPhysioImaging.sPhysioExt.lTriggerWindow = 5
+sPhysioImaging.sPhysioExt.lArrhythmiaDetection = 1
+sPhysioImaging.sPhysioExt.lCardiacGateOnThreshold = 100000
+sPhysioImaging.sPhysioExt.lCardiacGateOffThreshold = 700000
+sPhysioImaging.sPhysioExt.lTriggerIntervals = 1
+sPhysioImaging.sPhysioResp.lRespGateThreshold = 20
+sPhysioImaging.sPhysioResp.lRespGatePhase = 2
+sPhysioImaging.sPhysioResp.dGatingRatio  = 0.3
+sPhysioImaging.sPhysioNative.ucMode      = 0x1
+sSpecPara.lPhaseCyclingType              = 1
+sSpecPara.lPhaseEncodingType             = 1
+sSpecPara.lRFExcitationBandwidth         = 1
+sSpecPara.ucRemoveOversampling           = 0x1
+sSpecPara.lDecouplingType                = 1
+sSpecPara.lNOEType                       = 1
+sSpecPara.lExcitationType                = 1
+sSpecPara.lSpectralSuppression           = 1
+sDiffusion.ulMode                        = 0x1
+sAngio.ucPCFlowMode                      = 0x2
+sAngio.ucTOFInflow                       = 0x4
+sAngio.lDynamicReconMode                 = 1
+sAngio.lTemporalInterpolation            = 1
+sDistortionCorrFilter.ucMode             = 0x1
+sPat.lAccelFactPE                        = 1
+sPat.lAccelFact3D                        = 1
+sPat.ucPATMode                           = 0x1
+sPat.ucRefScanMode                       = 0x1
+sMDS.ulMdsModeMask                       = 0x1
+sMDS.sMdsEndPosSBCS_mm.dTra              = 600
+sMDS.ulMdsReconMode                      = 0x1
+sMDS.dMdsRangeExtension                  = 600
+ucEnableIntro                            = 0x1
+ucDisableChangeStoreImages               = 0x1
+ucReconstructionMode                     = 0x1
+ucOneSeriesForAllMeas                    = 0x1
+ucPHAPSMode                              = 0x1
+ucDixon                                  = 0x1
+ucDixonSaveOriginal                      = 0x1
+lAverages                                = 1
+dAveragesDouble                          = 1
+adFlipAngleDegree[0]                     = 80
+lScanTimeSec                             = 5
+lTotalScanTimeSec                        = 5
+dRefSNR                                  = 430574.3688
+dRefSNR_VOI                              = 430574.3688
+tdefaultEVAProt                          = "%SiemensEvaDefProt%\Inline\Inline.evp"
+asCoilSelectMeas[0].tNucleus             = "1H"
+asCoilSelectMeas[0].iUsedRFactor         = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tCoilID = "Body"
+asCoilSelectMeas[0].asList[0].sCoilElementID.lCoilCopy = 1
+asCoilSelectMeas[0].asList[0].sCoilElementID.tElement = "BC"
+asCoilSelectMeas[0].asList[0].lElementSelected = 1
+asCoilSelectMeas[0].asList[0].lRxChannelConnected = 1
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[0] = 0xff
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[1] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[2] = 0xee
+asCoilSelectMeas[0].sCOILPLUGS.aulPlugId[3] = 0xb1
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[0] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[1] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[2] = 0x2
+asCoilSelectMeas[0].sCOILPLUGS.auiNmbrOfNibbles[3] = 0x2
+asCoilSelectMeas[0].aFFT_SCALE[0].flFactor = 5.90811
+asCoilSelectMeas[0].aFFT_SCALE[0].bValid = 1
+asCoilSelectMeas[0].aFFT_SCALE[0].lRxChannel = 1
+sEFISPEC.bEFIDataValid                   = 1
+ucCineMode                               = 0x1
+ucCoilCombineMode                        = 0x2
+ucFlipAngleMode                          = 0x1
+lTOM                                     = 1
+ucReadOutMode                            = 0x1
+ucBold3dPace                             = 0x1
+ucForcePositioningOnNDIS                 = 0x1
+sParametricMapping.ucParametricMap       = 0x1
+sAsl.ulMode                              = 0x1
+### ASCCONV END ###
+
+</FONT> 
+
+------------------------------
+---End of unit test results---
+------------------------------
+</PRE> </FONT> </BODY> </HTML>

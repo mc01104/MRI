@@ -1,0 +1,135 @@
+#----------------------------------------------------------------------
+#  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+#----------------------------------------------------------------------
+#
+#    File: MrImaging\seq\a_se_15b130\se_15b130_UT_IT.tok@@\main\1
+# Version:
+#  Author: KOELLNER
+#    Date: Mi 05.06.2002 16:26 
+#
+#    Lang: Mephisto input token file
+# Project: NUMARIS/4
+#
+# Descrip: Protocol parameters for SeqUT
+#
+#----------------------------------------------------------------------
+
+
+
+
+TR [All] = Max
+TE [All] = Max
+TD [All] = Max
+TI [All] = 200
+
+FOVRead = Max
+FOVPhase = Max
+
+
+# General Properties
+# ------------------
+Dim = 2d
+# 2d / 3d
+
+GradientSystem = fast
+#   normal
+
+
+# RF Properties
+# -------------
+RFPulseType = fast
+# fast / normal / low
+
+RFSpoiling = on
+
+FlipAngle = 80
+
+
+
+# Loop control
+# ------------
+Averaging = long
+# short term / long term
+
+EllipticalScanning =          on
+
+SliceSeriesmode = descending
+# ascending / descending / interleaved
+
+MultiSlice = interleaved
+# interleaved / sequential
+
+AsymmetricEcho =              on
+
+Interpolation =               off
+
+EPIFactor =                   min
+
+TurboFactor =                 min
+
+Contrasts =                   min
+
+Segments =                    2
+
+
+
+BaseMatrix =                  min
+
+Bandwidth =										max
+
+
+# 2D Stuff
+# --------
+PhaseResolution =             75
+
+PhaseOversampling =           0
+
+PhasePartialFourier =         7/8
+#   4/8  /  5/8  /  6/8  / 7/8  / off
+
+
+
+# Slices
+# ------
+lSlices  = 1
+
+lConcatenations = 1
+
+SliceThickness =              5
+
+
+
+# Regular Sats
+# ------------
+lRSats               = 0
+
+
+# Preparation Pulses
+# ------------------
+Introduction = on
+
+MTC = off
+
+FatSat = none
+#   fat saturation  /  none
+
+WaterSat = none
+
+inversion = none
+#   slice selective / volume selective / none
+
+DarkBloodPulse = none
+
+
+# Physiologic Stuff
+# -----------------
+Phases = 1
+
+TD [All] = 2
+TI [All] = Min
+TE [All] = 15
+
+FOVPhase = 300
+FOVRead  = 300
+
+TR [All] = 300

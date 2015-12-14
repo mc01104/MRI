@@ -1,0 +1,79 @@
+##-----------------------------------------------------------------------------
+##  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+##-----------------------------------------------------------------------------
+##
+## Project: NUMARIS/4
+##    File: \n4\pkg\MrServers\MrImaging\seq\FLASHBack\makefile.trs
+## Version: 
+##  Author: KOELLNER
+##  Charge: Michael Zwanger, MRIA-Seq, +9131/84-2672
+##    Date: n.a. 
+##
+##    Lang: make
+##
+## Descrip: Makefile fuer Sequenz-DLL
+##
+##-----------------------------------------------------------------------------
+
+NOSYNGO() 
+
+
+##-----------------------------------------------------------------------------
+## local compiler flags
+##
+CPPFLAGS (-D_CONSOLE)
+CPPFLAGS (-DBUILD_SEQU)
+CPPFLAGS (-DSEQUENCE_CLASS_FLASHBack)
+CPPFLAGS (-DSEQ_NAMESPACE=SEQ_FLASHBack) 
+CPPFLAGS (-DMRPROT_DEP_OPT)
+
+
+##-----------------------------------------------------------------------------
+## source files
+##
+CPPSOURCES (FLASHBack)
+CPPSOURCES (FLASHBack_UI)
+
+
+##-----------------------------------------------------------------------------
+## include paths
+##
+INCLPATHS (-I /n4_extsw/x86/extsw/MedCom/include)
+
+
+##-----------------------------------------------------------------------------
+## libraries to be linked
+##
+MSDEV_i586_WinNT400(LDLIBS (libUILink))
+
+LDLIBS (libRT)
+LDLIBS (libSBB)
+LDLIBS (libSeqSysProp)
+LDLIBS (libSeqUT)
+LDLIBS (libSeqUtil)
+LDLIBS (libSSL)
+LDLIBS (libUICtrl)
+LDLIBS (MeasNucleiBase)
+LDLIBS (MeasNucleiIF)
+LDLIBS (MrGenericDC)
+LDLIBS (MrParc)
+LDLIBS (MrProt)
+LDLIBS (MrProtocolData)
+LDLIBS (MrTrace)
+LDLIBS (UTrace)
+LDLIBS (SeqBuffer)
+LDLIBS (Sequence)
+
+
+##-----------------------------------------------------------------------------
+## target name
+##
+LIB (FLASHBack)
+
+##-----------------------------------------------------------------------------
+##  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+##-----------------------------------------------------------------------------
+
+
+
+

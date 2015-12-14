@@ -1,0 +1,70 @@
+##-----------------------------------------------------------------------------
+##  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+##-----------------------------------------------------------------------------
+##
+## Project: NUMARIS/4
+##    File: 
+## Version:
+##  Author: SeSo_General
+##    Date: n.a.
+##
+##    Lang: MedMake
+##
+## Descrip: 
+##
+##-----------------------------------------------------------------------------
+
+##-----------------------------------------------------------------------------
+## enter local compiler flags
+##
+
+
+MSDEV_WinNT400(CPPFLAGS(-FR))     
+INCLPATHS(/n4/pkg)
+INCLPATHS(/n4/pkg/MrServers/MrVista/Ice/IceIdeaFunctors/IceActuationCloseLoopV2)
+
+
+##-----------------------------------------------------------------------------
+## enter source files
+##
+
+CPPSOURCES(IceProgActuationCloseLoop)
+CPPSOURCES(ActuationCloseLoopConfig)
+CPPSOURCES(ObjectMap)
+CPPSOURCES(CircleFit)
+CPPSOURCES(Kalman)
+CPPSOURCES(rotor)
+CPPSOURCES(MRICapsule)
+CPPSOURCES(MRI2Capsules)
+##CPPSOURCES(MultiAxisBiopsyRobot)
+##-----------------------------------------------------------------------------
+## enter link libraries
+##
+
+LDLIBS(MrParc)   
+LDLIBS(UTrace)   
+LDLIBS(MrBasicObjects)             
+LDLIBS(IceBasic)
+LDLIBS(IceAlgos)
+LDLIBS(IceUtils)
+
+
+MSDEV_WinNT400(LDLIBS(libMES4BV))
+GCC_AMD_XLinux(LDLIBS(libMES))  
+GCC_Linux(LDLIBS(libMES))  
+
+
+##-----------------------------------------------------------------------------
+## enter target name
+##
+
+LIB(IceProgActuationCloseLoopV2)
+EVPTLB(IceProgActuationCloseLoopV2)
+
+##-----------------------------------------------------------------------------
+##  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+##-----------------------------------------------------------------------------
+
+VISTA_GCC_LINUX_AMD64(LDLIBS(ace))
+ GCC_Linux(LDLIBS(ace))
+

@@ -1,0 +1,55 @@
+##-----------------------------------------------------------------------------
+##  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+##-----------------------------------------------------------------------------
+##
+## Project: NUMARIS/4
+##    File: \n4\pkg\MrServers\MrImaging\seq\a_se_15b130\makefile.trs
+## Version:
+##  Author: KOELLNER
+##  Charge: Michael Zwanger, MRIA-Seq, +9131/84-2672
+##    Date: n.a. 
+##
+##    Lang: make
+##
+## Descrip: Makefile fuer Sequenz-DLL
+##
+##-----------------------------------------------------------------------------
+NOSYNGO()
+
+CPPFLAGS (-DSEQUENCE_CLASS_SE15B130)
+CPPFLAGS (-DSEQ_NAMESPACE=SE_15B130)
+CPPFLAGS (-DBUILD_SEQU)
+CPPFLAGS (-D_CONSOLE)
+
+CPPSOURCES (a_se_b130_15000)
+CPPSOURCES (a_se_b130_15000_UI)
+
+# Base framework
+LDLIBS (MrTrace)
+LDLIBS (MrGenericDC)
+LDLIBS (MrParc)
+
+# Parameters
+LDLIBS (MrProt)
+LDLIBS (libSeqSysProp)
+LDLIBS (MeasSections)
+
+# Measurement system
+LDLIBS (Sequence)
+LDLIBS (libMES)
+LDLIBS (MeasNucleiBase)
+LDLIBS (libSSL)
+LDLIBS (libRT)
+
+# Application libraries
+LDLIBS (libSBB)
+LDLIBS (libSeqUtil)
+LDLIBS (libSeqUT)
+LDLIBS (libUICtrl)
+MSDEV_i586_WinNT400(LDLIBS (libUILink))
+
+LIB(se_15b130)
+
+##-----------------------------------------------------------------------------
+##  Copyright (C) Siemens AG 1998  All Rights Reserved.  Confidential
+##-----------------------------------------------------------------------------

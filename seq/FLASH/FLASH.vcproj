@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="FLASH"
+	ProjectGUID="{4626DA53-4BFC-4466-8EAA-CA7532DEC5AD}"
+	RootNamespace="FLASH"
+	SccProjectName="Rational ClearCase"
+	SccAuxPath="Rational ClearCase"
+	SccLocalPath="Rational ClearCase"
+	SccProvider="Rational ClearCase"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="196613"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="Q:\n4_prod\x86\prod\debug\share\MrServers\MrImaging\seq\FLASH"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="cd /d Q:\n4\pkg &amp; medmake FLASHd.dll"
+				ReBuildCommandLine=""
+				CleanCommandLine=""
+				Output="Q:\n4\x86\prod\bin\FLASHd.dll"
+				PreprocessorDefinitions="MFCDebug;_DEBUG;RWDEBUG;WINVER=0x500;_WIN32_WINNT=0x500;WIN32;_AFXDLL;_WINDOWS;WinNT400;MSVC60;AFX_NOVTABLE=;DEBUG;_RWTOOLSDLL;_UNICODE;UNICODE;O_DLL_PCLASS_ONLY;BUILD_MriProSdFeView;_WINDLL;_USRDLL;CSA_HAS_DLL;ACE_HAS_DLL;BUILD_MriProSdFeView"
+				IncludeSearchPath="Q:\n4\pkg;Q:\n4\tool;Q:\n4_opensource\STLport\stlport;Q:\MR_Infra_01_PUB\include;Q:\n4_opensource\boost;Q:\n4_prod\x86\prod\include;Q:\n4_deli_vd11a\x86\delivery\include;Q:\n4_extsw\x86\extsw\MedCom\include;Q:\SWF_extern\SDK\include;Q:\SWF_extern\DevStudio_6.0\VC98\Include;Q:\SWF_extern\DevStudio_6.0\VC98\MFC\Include;Q:\SWF_extern\DevStudio_6.0\VC98\ATL\Include;Q:\n4\pkg\MrApplications\MrExamUI\ProSd\ProSdFe\ProSdFeView;Q:\n4_extsw\x86\extsw\MedCom\versant\vds605\h;Q:\n4_extsw\x86\extsw\include"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="Q:\n4_prod\x86\prod\release\share\MrServers\MrImaging\seq\FLASH"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="cd /d Q:\n4\pkg &amp; medmake FLASH.dll"
+				ReBuildCommandLine=""
+				CleanCommandLine=""
+				Output="Q:\n4\x86\prod\bin\FLASH.dll"
+				PreprocessorDefinitions="MFCRelease;NDEBUG;WINVER=0x500;_WIN32_WINNT=0x500;WIN32;_AFXDLL;_WINDOWS;WinNT400;MSVC60;AFX_NOVTABLE=;_RWTOOLSDLL;_UNICODE;UNICODE;O_DLL_PCLASS_ONLY;_WINDOWS"
+				IncludeSearchPath="Q:\n4\pkg;Q:\n4\tool;Q:\n4_opensource\STLport\stlport;Q:\MR_Infra_01_PUB\include;Q:\MR_ApplBasic_01_PUB\include;Q:\n4_opensource\boost;Q:\n4_prod\x86\prod\include;Q:\n4_deli_vd11a\x86\delivery\include;Q:\n4_extsw\x86\extsw\MedCom\include;Q:\SWF_extern\SDK\include;Q:\SWF_extern\DevStudio_6.0\VC98\Include;Q:\SWF_extern\DevStudio_6.0\VC98\MFC\Include;Q:\SWF_extern\DevStudio_6.0\VC98\ATL\Include;Q:\n4\pkg\MrApplications\MrExamAddOn\MrCreateRadialSlices;Q:\n4_extsw\x86\extsw\MedCom\versant\vds605\h;Q:\n4_extsw\x86\extsw\include"
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="External Header Files"
+			>
+			<File
+				RelativePath=".\CompositeKernel.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FISPKernel.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FLASH.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FLASH_UI.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FLASHSampling.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Source Files"
+			>
+			<File
+				RelativePath=".\CompositeKernel.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FISPKernel.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FLASH.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FLASH_UI.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\FLASHSampling.cpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Build Files"
+			>
+			<File
+				RelativePath=".\makefile.trs"
+				>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

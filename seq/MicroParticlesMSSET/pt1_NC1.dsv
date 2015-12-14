@@ -1,0 +1,73 @@
+; 
+; Z:\n4\pkg\MrServers\MrImaging\seq\capsuleCL\pt1_NC1.dsv
+; 
+; Created by DSP-Simulator / V4.0 - debug version (Build: Jun 17 2012)
+; 16:46:12 on Tuesday, November 04, 2014
+; 
+
+
+; This file includes the data for: Numeric Crystal Oscillator 1 Phase
+
+
+[FILETYPE]
+FORMAT=DSV_V0100
+
+[DEFINITIONS]
+TITLE=Numeric Crystal Oscillator 1 Phase
+SAMPLES=89621       
+VERTUNITNAME=Degree
+HORIUNITNAME=µs
+HORIDELTA=1.000000
+VERTFACTOR=100000.000000
+MAXLIMIT=180.000000
+MINLIMIT=-180.000000
+
+[FRAME]
+
+
+[VALUES]
+0
+0
+40998
+9000000
+0
+0
+997
+-9000000
+0
+0
+15307
+-9000000
+0
+0
+997
+9000000
+0
+0
+4327
+18000000
+0
+0
+3888
+-18000000
+0
+0
+2886
+18000000
+0
+0
+3888
+-18000000
+0
+0
+306
+9000000
+0
+0
+997
+-9000000
+0
+0
+14998
+
+;  end of graphic data file

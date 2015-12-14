@@ -1,0 +1,702 @@
+; 
+; Z:\n4\pkg\MrServers\MrImaging\seq\capsuleCL\pt1_INF.dsv
+; 
+; Created by DSP-Simulator / V4.0 - debug version (Build: Jun 17 2012)
+; 16:46:12 on Tuesday, November 04, 2014
+; 
+
+
+[SYNCTYPE]
+
+[INFO]
+* EventBlock 1000 20000
+/--------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+|                                                                                                                                                                          |
+|                                          Event Block No.: 0 Event Block Start Time: 1000 [us], Event Block Duration: 20000 [us]                                          |
+|                                                                                                                                                                          |
+|==========================================================================================================================================================================|
+|                                                                                                                                                                          |
+| Rel.Time | TXFlip/Dur |                      Freq/Phase | P/R/S |                #RX/Dur | GP:Ampl/Rut/Dura/Rdt | GR:Ampl/Rut/Dura/Rdt | GS:Ampl/Rut/Dura/Rdt | SYNC/Dur |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        0 |            | [sADCCom_zSet]:      0/    0.00 |       | [sADCCom]: 1024/3891.2 |                      |                      |                      |          |
+|     3891 |            | [sADCCom_zNeg]:      0/    0.00 |       |                        |                      |                      |                      |          |
+|    20000 |            |                                 |       |                        |                      |                      |                      |          |
+\--------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+#INFO-END
+
+[INFO]
+adc MeasHeader 1000 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 1               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 0               ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 0               ;free parameter for IceProgram
+aushIceProgramPara1           : 2               ;free parameter for IceProgram
+aushIceProgramPara2           : 3               ;free parameter for IceProgram
+aushIceProgramPara3           : 1               ;free parameter for IceProgram
+aushIceProgramPara4           : 1               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 200             ;free parameter for IceProgram
+aushIceProgramPara7           : 40              ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 1               ;free parameter for IceProgram
+aushIceProgramPara11          : 90              ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 512             ;free parameter for IceProgram
+aushIceProgramPara18          : 16              ;free parameter for IceProgram
+aushIceProgramPara19          : 18000           ;free parameter for IceProgram
+aushIceProgramPara20          : 23              ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 150             ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+* EventBlock 21000 20000
+/----------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+|                                                                                                                                                                            |
+|                                          Event Block No.: 1 Event Block Start Time: 21000 [us], Event Block Duration: 20000 [us]                                           |
+|                                                                                                                                                                            |
+|============================================================================================================================================================================|
+|                                                                                                                                                                            |
+| Rel.Time | TXFlip/Dur |                       Freq/Phase | P/R/S |                 #RX/Dur | GP:Ampl/Rut/Dura/Rdt | GR:Ampl/Rut/Dura/Rdt | GS:Ampl/Rut/Dura/Rdt | SYNC/Dur |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        0 |            | [sADCCom2_zSet]:      0/    0.00 |       | [sADCCom2]: 1024/3891.2 |                      |                      |                      |          |
+|     3891 |            | [sADCCom2_zNeg]:      0/    0.00 |       |                         |                      |                      |                      |          |
+|    20000 |            |                                  |       |                         |                      |                      |                      |          |
+\----------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+#INFO-END
+
+[INFO]
+adc MeasHeader 21000 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 2               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 0               ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 0               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 3               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+* EventBlock 41000 16310
+/------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+|                                                                                                                                                                                                                              |
+|                                                                   Event Block No.: 2 Event Block Start Time: 41000 [us], Event Block Duration: 16310 [us]                                                                    |
+|                                                                                                                                                                                                                              |
+|==============================================================================================================================================================================================================================|
+|                                                                                                                                                                                                                              |
+| Rel.Time |           TXFlip/Dur |                    Freq/Phase | P/R/S |              #RX/Dur |                 GP:Ampl/Rut/Dura/Rdt |                 GR:Ampl/Rut/Dura/Rdt | GS:Ampl/Rut/Dura/Rdt |               SYNC/Dur |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        0 | [sSRF01]:  90.0/1000 | [sSRF01zSet]:      0/   90.00 |       |                      |                                      |                                      |                      | [sWakeUp]: WAKEUP/   0 |
+|     1000 |                      | [sSRF01zNeg]:      0/  -90.00 |       |                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                                      |                      |                        |
+|     3250 | [sSRF02]: 180.0/1280 | [sSRF02zSet]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     4530 |                      | [sSRF02zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     5030 |                      |                               |       |                      |    [sGradRO]:  10.30/ 300/ 4200/ 300 |                                      |                      |                        |
+|     5330 |                      | [sADCX_zSet]:      0/    0.00 |       | [sADCX]: 1024/3891.2 |                                      |                                      |                      |                        |
+|     9221 |                      | [sADCX_zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     9230 |                      |                               |       |                      |                                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                      |                        |
+|    10030 | [sSRF02]: 180.0/1280 | [sSRF02zSet]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    11310 |                      | [sSRF02zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    11310 |                      |                               |       |                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                                      |                      |                        |
+|    11810 |                      |                               |       |                      |                                      |    [sGradRO]:  10.30/ 300/ 4200/ 300 |                      |                        |
+|    12110 |                      | [sADCY_zSet]:      0/    0.00 |       | [sADCY]: 1024/3891.2 |                                      |                                      |                      |                        |
+|    16001 |                      | [sADCY_zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    16310 |                      |                               |       |                      |                                      |                                      |                      |                        |
+\------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+#INFO-END
+
+[INFO]
+adc MeasHeader 46330 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 3               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 64              ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 1               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 1               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+adc MeasHeader 53110 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 4               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 64              ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 1               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 2               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+* EventBlock 57310 16310
+/------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+|                                                                                                                                                                                                                              |
+|                                                                   Event Block No.: 3 Event Block Start Time: 57310 [us], Event Block Duration: 16310 [us]                                                                    |
+|                                                                                                                                                                                                                              |
+|==============================================================================================================================================================================================================================|
+|                                                                                                                                                                                                                              |
+| Rel.Time |           TXFlip/Dur |                    Freq/Phase | P/R/S |              #RX/Dur |                 GP:Ampl/Rut/Dura/Rdt |                 GR:Ampl/Rut/Dura/Rdt | GS:Ampl/Rut/Dura/Rdt |               SYNC/Dur |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        0 | [sSRF01]:  90.0/1000 | [sSRF01zSet]:      0/  270.00 |       |                      |                                      |                                      |                      | [sWakeUp]: WAKEUP/   0 |
+|     1000 |                      | [sSRF01zNeg]:      0/ -270.00 |       |                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                                      |                      |                        |
+|     3250 | [sSRF02]: 180.0/1280 | [sSRF02zSet]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     4530 |                      | [sSRF02zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     5030 |                      |                               |       |                      |    [sGradRO]:  10.30/ 300/ 4200/ 300 |                                      |                      |                        |
+|     5330 |                      | [sADCX_zSet]:      0/  180.00 |       | [sADCX]: 1024/3891.2 |                                      |                                      |                      |                        |
+|     9221 |                      | [sADCX_zNeg]:      0/ -180.00 |       |                      |                                      |                                      |                      |                        |
+|     9230 |                      |                               |       |                      |                                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                      |                        |
+|    10030 | [sSRF02]: 180.0/1280 | [sSRF02zSet]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    11310 |                      | [sSRF02zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    11310 |                      |                               |       |                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                                      |                      |                        |
+|    11810 |                      |                               |       |                      |                                      |    [sGradRO]:  10.30/ 300/ 4200/ 300 |                      |                        |
+|    12110 |                      | [sADCY_zSet]:      0/  180.00 |       | [sADCY]: 1024/3891.2 |                                      |                                      |                      |                        |
+|    16001 |                      | [sADCY_zNeg]:      0/ -180.00 |       |                      |                                      |                                      |                      |                        |
+|    16310 |                      |                               |       |                      |                                      |                                      |                      |                        |
+\------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+#INFO-END
+
+[INFO]
+adc MeasHeader 62640 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 5               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 64              ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 1               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 1               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+adc MeasHeader 69420 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 6               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 64              ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 1               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 2               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+* EventBlock 73620 16310
+/------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+|                                                                                                                                                                                                                              |
+|                                                                   Event Block No.: 4 Event Block Start Time: 73620 [us], Event Block Duration: 16310 [us]                                                                    |
+|                                                                                                                                                                                                                              |
+|==============================================================================================================================================================================================================================|
+|                                                                                                                                                                                                                              |
+| Rel.Time |           TXFlip/Dur |                    Freq/Phase | P/R/S |              #RX/Dur |                 GP:Ampl/Rut/Dura/Rdt |                 GR:Ampl/Rut/Dura/Rdt | GS:Ampl/Rut/Dura/Rdt |               SYNC/Dur |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        0 | [sSRF01]:  90.0/1000 | [sSRF01zSet]:      0/   90.00 |       |                      |                                      |                                      |                      | [sWakeUp]: WAKEUP/   0 |
+|     1000 |                      | [sSRF01zNeg]:      0/  -90.00 |       |                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                                      |                      |                        |
+|     3250 | [sSRF02]: 180.0/1280 | [sSRF02zSet]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     4530 |                      | [sSRF02zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     5030 |                      |                               |       |                      |    [sGradRO]:  10.30/ 300/ 4200/ 300 |                                      |                      |                        |
+|     5330 |                      | [sADCX_zSet]:      0/    0.00 |       | [sADCX]: 1024/3891.2 |                                      |                                      |                      |                        |
+|     9221 |                      | [sADCX_zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|     9230 |                      |                               |       |                      |                                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                      |                        |
+|    10030 | [sSRF02]: 180.0/1280 | [sSRF02zSet]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    11310 |                      | [sSRF02zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    11310 |                      |                               |       |                      | [sGReadDeph]:  23.98/ 140/  900/ 140 |                                      |                      |                        |
+|    11810 |                      |                               |       |                      |                                      |    [sGradRO]:  10.30/ 300/ 4200/ 300 |                      |                        |
+|    12110 |                      | [sADCY_zSet]:      0/    0.00 |       | [sADCY]: 1024/3891.2 |                                      |                                      |                      |                        |
+|    16001 |                      | [sADCY_zNeg]:      0/    0.00 |       |                      |                                      |                                      |                      |                        |
+|    16310 |                      |                               |       |                      |                                      |                                      |                      |                        |
+\------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/
+#INFO-END
+
+[INFO]
+adc MeasHeader 78950 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 7               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 64              ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 1               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 1               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+adc MeasHeader 85730 3891
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 8               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000002      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 1024            ;# of samples acquired in scan
+ushUsedChannels               : 2               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 512             ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 64              ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 1               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 2               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.707107        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.707107        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
+[INFO]
+adc MeasHeader 91040 10
+sulFlagsAndDMALength          : 0               ;bit  0..27: DMA length [bytes], bit 28..31: pci_rx enable flags
+lMeasUID                      : 0               ;measurement user ID
+ulScanCounter                 : 9               ;scan counter [1...]
+ulTimeStamp                   : 0               ;PMU time stamp [2.5 ms ticks since last trigger]
+ulPMUTimeStamp                : 0               ;time stamp [2.5 ms ticks since 00:00]
+aulEvalInfoMask0              : 0x00000001      ;free parameter for IceProgram
+aulEvalInfoMask1              : 0x00000000      ;free parameter for IceProgram
+ushSamplesInScan              : 0               ;# of samples acquired in scan
+ushUsedChannels               : 0               ;# of channels used in scan
+sLC.ushLine                   : 0               ;loop counters - line index 
+sLC.ushAcquisition            : 0               ;loop counters - acquisition index
+sLC.ushSlice                  : 0               ;loop counters - slice index
+sLC.ushPartition              : 0               ;loop counters - partition index
+sLC.ushEcho                   : 0               ;loop counters - echo index
+sLC.ushPhase                  : 0               ;loop counters - phase index
+sLC.ushRepetition             : 0               ;loop counters - measurement repeat index
+sLC.ushSet                    : 0               ;loop counters - set index
+sLC.ushSeg                    : 0               ;loop counters - segment index (for TSE)
+sLC.ushIda                    : 0               ;loop counters - IceDimension a index
+sLC.ushIdb                    : 0               ;loop counters - IceDimension b index
+sLC.ushIdc                    : 0               ;loop counters - IceDimension c index
+sLC.ushIdd                    : 0               ;loop counters - IceDimension d index
+sLC.ushIde                    : 0               ;loop counters - IceDimension e index
+sCutOff.ushPre                : 0               ;write ushPre zeros at line start
+sCutOff.ushPost               : 0               ;write ushPost zeros at line end
+ushKSpaceCentreColumn         : 0               ;centre of echo
+fReadOutOffcentre             : 0.000000        ;ReadOut offcenter value
+ulTimeSinceLastRF             : 0               ;Sequence time stamp since last RF pulse
+ushKSpaceCentreLineNo         : 0               ;number of K-space centre line
+ushKSpaceCentrePartitionNo    : 0               ;number of K-space centre partition
+aushIceProgramPara0           : 0               ;free parameter for IceProgram
+aushIceProgramPara1           : 0               ;free parameter for IceProgram
+aushIceProgramPara2           : 0               ;free parameter for IceProgram
+aushIceProgramPara3           : 0               ;free parameter for IceProgram
+aushIceProgramPara4           : 0               ;free parameter for IceProgram
+aushIceProgramPara5           : 0               ;free parameter for IceProgram
+aushIceProgramPara6           : 0               ;free parameter for IceProgram
+aushIceProgramPara7           : 0               ;free parameter for IceProgram
+aushIceProgramPara8           : 0               ;free parameter for IceProgram
+aushIceProgramPara9           : 0               ;free parameter for IceProgram
+aushIceProgramPara10          : 0               ;free parameter for IceProgram
+aushIceProgramPara11          : 0               ;free parameter for IceProgram
+aushIceProgramPara12          : 0               ;free parameter for IceProgram
+aushIceProgramPara13          : 0               ;free parameter for IceProgram
+aushIceProgramPara14          : 0               ;free parameter for IceProgram
+aushIceProgramPara15          : 0               ;free parameter for IceProgram
+aushIceProgramPara16          : 0               ;free parameter for IceProgram
+aushIceProgramPara17          : 0               ;free parameter for IceProgram
+aushIceProgramPara18          : 0               ;free parameter for IceProgram
+aushIceProgramPara19          : 0               ;free parameter for IceProgram
+aushIceProgramPara20          : 0               ;free parameter for IceProgram
+aushIceProgramPara21          : 0               ;free parameter for IceProgram
+aushIceProgramPara22          : 0               ;free parameter for IceProgram
+aushIceProgramPara23          : 0               ;free parameter for IceProgram
+sSD.sSlicePosVec.flSag        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flCor        : 0.000000        ;Slice Data - slice position vector
+sSD.sSlicePosVec.flTra        : 0.000000        ;Slice Data - slice position vector
+sSD.aflQuaternion 0           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 1           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 2           : 0.000000        ;rotation matrix as quaternion
+sSD.aflQuaternion 3           : 0.000000        ;rotation matrix as quaternion
+ushPTABPosNeg                 : 0               ;
