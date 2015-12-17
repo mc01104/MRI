@@ -51,7 +51,14 @@ MRI2Capsules::MRI2Capsules(void)
 
 
 	m_maskPrj = 0;
-
+	
+	m_R1 = 0.0005;
+	m_R2 = 0.001;
+	m_MPC_horizon = 10;
+	m_k_iter = 0.1;
+	m_global_gain = 1.0;
+	m_kp = 1.0;
+	m_kq = 1.0;
 }
 
 MRI2Capsules::~MRI2Capsules(void)
@@ -362,8 +369,8 @@ void MRI2Capsules::applyControlLaw(uint16_t prjAxis)
 	else if (m_uValx < -0.2)
 		m_uValx = -0.2;
 
-	//Alina before plotting devides by 10
-	m_uValx /= 10.0;
+	////Alina before plotting devides by 10
+	//m_uValx /= 10.0;
 
 	// Update the U0
 	for (int j = 0; j < 8; ++j)
@@ -393,10 +400,14 @@ Requires better design for modularity
 void MRI2Capsules::applyMPCControl(double* error, double* U0, double gradient, double* U_pred)
 {
 	//define the parameters for the MPC problem
-	int N = 10;				//horizon window for input optimization
-	double Ts = 0.01;		//sampling time interval
+	//int N = 10;				//horizon window for input optimization - read from GUI
+	int N = m_MPC_horizon;
+	double Ts = 0.01;		//sampling time interval - read from GUI (????)
 	int stateDim = 4;
 	
+
+	double R_capsule = 0.002;
+
 	//optimal control parameters
 	::Eigen::MatrixXd Q(stateDim, stateDim);
 	Q << 2.0, 0.0, 0.0, 0.0,
@@ -404,16 +415,21 @@ void MRI2Capsules::applyMPCControl(double* error, double* U0, double gradient, d
 	     0.0, 0.0, 2.0, 0.0, 
 	     0.0, 0.0, 0.0, 0.1;
 
-	Q *= 0.001;
+	Q *= m_kq * 0.001;
 
 	::Eigen::MatrixXd P = 0.01*Q; 
+	P *= m_kp;
 
 	double R = 0.001;
 
 	//model parameters
-	double K = 0.1;
-	double r1 = 0.0015;
-	double r2 = 0.0030;
+	// double K = 0.1;
+	double K = m_k_iter;
+	//double r1 = 0.0015;
+	//double r2 = 0.0030;
+	double r1 = m_R1;
+	double r2 = m_R2;
+
 	int	n1 = 7850;
 	int	n2 = 7850;
 
@@ -422,23 +438,35 @@ void MRI2Capsules::applyMPCControl(double* error, double* U0, double gradient, d
 	double Ms2 = 1.36*1.0e06;
 	double normu = 1.0;
 
-	double Re1 = normu*2*r1/n;
-	double Re2 = normu*2*r2/n;
+	//double Re1 = normu*2*r1/n;
+	//double Re2 = normu*2*r2/n;
+	double Re1 = normu*2*R_capsule/n;
+	double Re2 = normu*2*R_capsule/n;
 	
 	double C1 = 24.0/Re1 + 6.0/(1 + ::std::sqrt(Re1)) + 0.4;
 	double C2 = 24.0/Re2 + 6.0/(1 + ::std::sqrt(Re2)) + 0.4;
-	double V1 = 4.0/3.0 * M_PI *::std::pow(r1, 2);
-	double V2 = 4.0/3.0 * M_PI *::std::pow(r2, 2);
-	double A1 = M_PI*::std::pow(r1, 2); 
-	double A2 = M_PI*::std::pow(r2, 2); 
+	double V1 = 4.0/3.0 * M_PI *::std::pow(r1, 3);
+	double V2 = 4.0/3.0 * M_PI *::std::pow(r2, 3);
+	double A1 = 2 * M_PI*::std::pow(r1, 2); 
+	double A2 = 2 * M_PI*::std::pow(r2, 2); 
 
 	double m1 = n1*V1;
     double m2 = n2*V2;
+
+	double V_capsule = 4.0/3.0 * M_PI *::std::pow(R_capsule, 3);
+	double A_capsule_half = 2 * M_PI *  ::std::pow(R_capsule, 2);
+
+	//double g1 = V1*Ms1/m1;
+	//double g2 = V2*Ms2/m2;
+
+	//double b1 = M_PI*n1*C1*A1/(2*m1);
+	//double b2 = M_PI*n2*C2*A2/(2*m2);
+
 	double g1 = V1*Ms1/m1;
 	double g2 = V2*Ms2/m2;
 
-	double b1 = M_PI*n1*C1*A1/(2*m1);
-	double b2 = M_PI*n2*C2*A2/(2*m2);
+	double b1 = M_PI*n1*C1*A_capsule_half/(2*m1);
+	double b2 = M_PI*n2*C2*A_capsule_half/(2*m2);
 
 	::Eigen::MatrixXd E = ::Eigen::MatrixXd::Zero(4,N);
 	::Eigen::MatrixXd lamda = ::Eigen::MatrixXd::Zero(4,N);
@@ -506,8 +534,42 @@ void MRI2Capsules::applyMPCControl(double* error, double* U0, double gradient, d
 	}
 
 	memcpy(U_pred, U_eig.data(), (N-1) * sizeof(double));
-	gradient = U_pred[0];
+	gradient = m_global_gain * U_pred[0];
 
 	delete U;
 }
 
+void MRI2Capsules::setR1(double radius)
+{
+	m_R1 = radius;
+}
+
+void MRI2Capsules::setR2(double radius)
+{
+	m_R2 = radius;
+}
+
+void MRI2Capsules::setMPCHorizon(int N)
+{
+	m_MPC_horizon = N;
+}
+
+void MRI2Capsules::setGainIterative(double gain)
+{
+	m_k_iter = gain;
+}
+
+void MRI2Capsules::setGainGlobal(double gain)
+{
+	m_global_gain = gain;
+}
+
+void MRI2Capsules::setGainP(double gain)
+{
+	m_kp = gain;
+}
+
+void MRI2Capsules::setGainQ(double gain)
+{
+	m_kq = gain;
+}

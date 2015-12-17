@@ -64,6 +64,14 @@ public:
 	void setMaxGradAmplitude(double max);
 	void setSpoilerDuration(double Ts);
 	void setImgMomentum(double momentum);
+
+	void setR1(double radius);
+	void setR2(double radius);
+	void setMPCHorizon(int N);
+	void setGainIterative(double gain);
+	void setGainGlobal(double gain);
+	void setGainP(double gain);
+	void setGainQ(double gain);
 	
 // George's code to test compiling Eigen on Siemens
 	::Eigen::MatrixXf R;
@@ -127,6 +135,15 @@ private:
 
 	//Correlation masks
 	double** m_maskPrj;
+
+	// MPC controller parameters
+	double			m_R1;
+	double			m_R2;
+	int				m_MPC_horizon;
+	double			m_k_iter;
+	double			m_global_gain;
+	double			m_kq;
+	double			m_kp;
 	
 };
 
